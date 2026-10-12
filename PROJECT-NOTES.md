@@ -32,7 +32,7 @@ _Leinaro Der Schwerpunkt liegt zunächst auf Webdesign, Hosting, laufender Websi
 _+43 660 3972228_
 
 **E-Mail:**
-_office@itsolutions-leitner.at - Allgemeine Anfragen; support@itsolutions-leitner.at_
+_office@leinaro.at - Allgemeine Anfragen; support@itsolutions-leitner.at_
 
 **Adresse (falls relevant):**
 
@@ -558,7 +558,7 @@ Zusätzlich sollen folgende Punkte berücksichtigt werden:
 ## 20. Kontaktformular
 
 **Soll das Kontaktformular echte E-Mails senden?**
-- [X] Ja → Formspree, EmailJS oder andere passende Lösung anbinden --> Verlinkung:
+- [X] Ja → Web3Forms per JavaScript/fetch anbinden --> https://api.web3forms.com/submit
 - [ ] Nein → Frontend-Bestätigung reicht vorerst
 
 Falls Ja angekreuzt wurde: Das Kontaktformular soll nach dem senden auch auf der Webseite bleiben und es soll ein Text wie "Ihre Nachricht wurde erfolgreich versendet" oder ähnlich kommen.
@@ -576,7 +576,7 @@ Falls Ja angekreuzt wurde: Das Kontaktformular soll nach dem senden auch auf der
 - [ ] Sonstiges: _______________
 
 **An welche E-Mail-Adresse sollen Anfragen gesendet werden?**
-office@itsolutions-leitner.at
+office@leinaro.at
 
 **Welche Bestätigung soll der Besucher nach dem Absenden erhalten?**
 _Codex - Überlege dir was_
@@ -634,7 +634,7 @@ _World4You_
 - [ ] Instagram Feed
 - [ ] Newsletter-System
 - [ ] Terminbuchung
-- [X] Formspree
+- [X] Web3Forms
 - [ ] EmailJS
 - [ ] Keine externen Dienste
 - [X] Sonstiges: Schriftarten lokal auf der eigenen Website einbinden, statt sie direkt von Google Fonts zu laden
@@ -672,7 +672,7 @@ _Feldstraße 3, 8670 Krieglach_
 _+43 660 3972228_
 
 **E-Mail:**
-_office@itsolutions-leitner.at_
+_office@leinaro.at_
 
 **UID-Nummer:**
 

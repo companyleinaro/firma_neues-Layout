@@ -7230,6 +7230,23 @@ main > section.section-surface,
   .services-overview .service-editorial--reverse .service-editorial__copy { grid-column: 1; grid-row: auto; }
 }
 
+/* Nur Versand-Rückmeldungen; vorhandene Formularmaße und Layouts bleiben unverändert. */
+.contact-form__status {
+  background: var(--aqua);
+  border-left: 3px solid var(--ink-deep);
+  border-radius: 8px;
+  color: var(--ink-deep);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 1.2rem 0 0;
+  overflow-wrap: anywhere;
+  padding: 1rem 1.1rem;
+}
+.contact-form__status[hidden] { display: none; }
+.contact-form__status[data-state="success"] { background: var(--lime-light); border-color: var(--lime-deep); }
+.contact-form__status[data-state="error"] { background: var(--coral-light); border-color: var(--coral); }
+.contact-form .honeypot[hidden] { display: none; }
+
 /* === 20. GEZIELTE VERFEINERUNGEN: LEISTUNGSBILDER, PORTRAIT UND BETREUUNG === */
 .services-cinema .cinema-card__media {
   align-items: center;

@@ -58,7 +58,7 @@ Navigation, Hero, Komponenten, Animationen und responsive Regeln schneller wiede
 ## Vor dem Livegang
 
 1. Bildplatzhalter durch echte Bilder im Ordner `images/` ersetzen und Alt-Texte ergänzen.
-2. Das Kontaktformular ist mit FormSubmit verbunden. Nach dem ersten Testversand schickt FormSubmit eine Aktivierungs-E-Mail an `office@itsolutions-leitner.at`; diese einmal bestätigen und danach Versand sowie automatische Empfangsbestätigung testen.
+2. Das Kontaktformular versendet per `fetch` über Web3Forms, ohne die Seite zu verlassen. Den hinterlegten Access Key im Web3Forms-Konto prüfen und einen echten Testversand durchführen. Die Empfängeradresse wird durch diesen Key bestimmt. Die Bestätigung erscheint im Formular; eine automatische Bestätigungs-E-Mail an Besucher ist nicht eingerichtet. Offline-Fehler und Pflichtfelder ebenfalls testen. Lokale Logiktests ohne E-Mail-Versand: `node tools/test-contact-form.cjs`.
 3. Impressum und Datenschutzerklärung rechtlich prüfen und fehlende Firmenangaben ergänzen.
 4. Die Domain in Vercel verbinden und anschließend `sitemap.xml` in der Google Search Console einreichen.
 

@@ -41,7 +41,7 @@ git push
 git commit -m "Footer Telefonnummer aktualisiert"
 git commit -m "FAQ Sektion auf Startseite ergänzt"
 git commit -m "Neue Leistung hinzugefügt"
-git commit -m "Kontaktformular Formspree eingebunden"
+git commit -m "Kontaktformular Web3Forms eingebunden"
 git commit -m "v1.1 Farbanpassung Buttons"
 ```
 
@@ -95,7 +95,7 @@ Thumbs.db
 !.env.example
 ```
 
-⚠️ Zugangsdaten, API-Keys, Formspree-Keys oder Passwörter niemals in `index.html`, `script.js` oder in einen Git-Commit schreiben. Alles, was im Frontend steht, kann von Besuchern eingesehen werden.
+⚠️ Private Zugangsdaten, geheime API-Schlüssel oder Passwörter niemals in Frontend-Dateien oder Git-Commits schreiben. Alles, was im Frontend steht, kann von Besuchern eingesehen werden. Der Web3Forms Access Key ist ausdrücklich für die öffentliche Verwendung im Formular vorgesehen; er ist kein privater API-Schlüssel.
 
 ## GIT aufwecken
 ```bash
