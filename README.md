@@ -60,7 +60,17 @@ Navigation, Hero, Komponenten, Animationen und responsive Regeln schneller wiede
 1. Bildplatzhalter durch echte Bilder im Ordner `images/` ersetzen und Alt-Texte ergänzen.
 2. Das Kontaktformular versendet per `fetch` über Web3Forms, ohne die Seite zu verlassen. Den hinterlegten Access Key im Web3Forms-Konto prüfen und einen echten Testversand durchführen. Die Empfängeradresse wird durch diesen Key bestimmt. Die Bestätigung erscheint im Formular; eine automatische Bestätigungs-E-Mail an Besucher ist nicht eingerichtet. Offline-Fehler und Pflichtfelder ebenfalls testen. Lokale Logiktests ohne E-Mail-Versand: `node tools/test-contact-form.cjs`.
 3. Impressum und Datenschutzerklärung rechtlich prüfen und fehlende Firmenangaben ergänzen.
-4. Die Domain in Vercel verbinden und anschließend `sitemap.xml` in der Google Search Console einreichen.
+4. `leinaro.at` als Hauptdomain und `www.leinaro.at` in Vercel verbinden und anschließend `https://leinaro.at/sitemap.xml` in der Google Search Console einreichen. Für die vorbereiteten Weiterleitungen auch `itsolutions-leitner.at` und `www.itsolutions-leitner.at` am selben Vercel-Projekt belassen bzw. verbinden. DNS und HTTPS müssen für die beteiligten Domains eingerichtet sein.
+
+## SEO und Hauptdomain
+
+Die Hauptadresse ist `https://leinaro.at/`. Alle 12 indexierbaren Seiten haben einen
+eigenen Canonical und stehen in der Sitemap, einschließlich der beiden Referenz-Detailseiten.
+Die Projektübersicht und die Startseite verlinken diese Detailseiten direkt.
+Impressum, Datenschutz und die Dankeseite behalten ihre vorhandene `noindex`-Einstellung.
+`vercel.json` bereitet dauerhafte Weiterleitungen der alten Domain und der www-Varianten
+auf die Hauptdomain sowie von `/index.html` auf `/` vor. Die Domain-Weiterleitungen
+werden erst nach Deployment und korrekter Domain-Anbindung wirksam; sie ändern kein DNS.
 
 ## Veröffentlichung
 

@@ -37,7 +37,7 @@ _office@leinaro.at - Allgemeine Anfragen; support@itsolutions-leitner.at_
 **Adresse (falls relevant):**
 
 **Website (alte, falls vorhanden):**
-_die zukünftige wird folgende sein: itsolutions-leitner.at_
+_Hauptdomain der Website: leinaro.at_
 
 **Social Media:**
 - Instagram: nicht vorhanden, aber bitte einen Button vorsehen
@@ -590,7 +590,7 @@ _Codex - Überlege dir was_
 ## 21. Technisches
 
 **Gibt es eine bestehende Domain?**
-- [X] Ja: itsolutions-leitner.at
+- [X] Ja: leinaro.at
 - [ ] Nein, wird noch besorgt
 - [ ] Nein, Vercel-Subdomain reicht vorerst
 
