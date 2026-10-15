@@ -91,6 +91,17 @@ svg {
   display: block;
   max-width: 100%;
 }
+.ui-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: -0.15em;
+  overflow: visible;
+}
+.ui-icon--arrow-long {
+  width: 1.5em;
+}
 img {
   height: auto;
 }
@@ -3182,8 +3193,12 @@ a.contact-method:hover strong {
   text-shadow: 0 3px 35px #11112745;
 }
 .hero-showcase--image .outline-text {
-  color: var(--white);
-  -webkit-text-stroke-color: var(--white);
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2.5px var(--white);
+  text-shadow: none;
 }
 .hero-showcase--image .hero-showcase__intro {
   max-width: 55ch;
