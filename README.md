@@ -23,10 +23,7 @@ Große Überschriften, Lesetexte und Links sowie kompakte Abstände bleiben
 erhalten. Alle 15 Seiten nutzen css/style.css. Der Header ist auf allen Seiten einheitlich, einschließlich Leistungsmenü und Kontaktbutton. Eine stabile Scrollleistenbreite verhindert seitliche Verschiebungen beim Seitenwechsel. Outline-Pink-Paare wiederholen den Schriftstil des Startseiten-Heros in Seitenköpfen und ausgewählten Abschnitten.
 
 Die Seiten, Abschnittsfolge, Leistungen und Kontaktfunktionen bleiben erhalten.
-Der Startseiten-Hero stellt Überschrift und Website-Beispiel nebeneinander;
-mobil stehen sie untereinander. Die Startseite ergänzt einen rotierenden
-Projektkreis, eine nahtlose Laufschrift, einen sanften Textglanz und eine
-leicht schwebende Website-Vorschau. Beim Scrollen blenden Inhalte ein und
+Der Startseiten-Hero zeigt images/hero-character.jpg vollflächig, auch mobil. Outline-Titel und Pink stehen mit dem Einführungstext mittig über dem Bild. Der Header ist beim Einstieg dunkel und wechselt beim Scrollen zur hellen Navigation; Abmessungen und Menüpunkte bleiben identisch. Der rotierende Projektkreis verlinkt am unteren Bildrand zur Kontaktseite. Die bisherigen Hero-Buttons entfallen. Eine Laufschrift und sanfter Textglanz ergänzen die Animationen. Beim Scrollen blenden Inhalte ein und
 Linien im Ablauf bauen sich auf. Buttons reagieren leicht auf den Mauszeiger;
 Bilder, Portrait und FAQ-Antworten erhalten zusätzliche Übergänge.
 Bei reduzierter Bewegung im Betriebssystem bleiben die Inhalte statisch

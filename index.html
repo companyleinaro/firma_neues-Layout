@@ -14,10 +14,11 @@
       content="Webdesign, Hosting, SEO und persönliche Betreuung aus der Steiermark."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://leinaro.at/images/hero-websites-character.png" />
+    <meta property="og:image" content="https://leinaro.at/images/hero-character.jpg" />
     <link rel="canonical" href="https://leinaro.at/" />
     <link rel="icon" href="images/leinaro-logo.svg" type="image/svg+xml" />
     <link rel="preload" href="fonts/poppins-600.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="images/hero-character.jpg" as="image" fetchpriority="high" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <script type="application/ld+json">
@@ -27,7 +28,7 @@
         "name": "Leinaro",
         "logo": "https://leinaro.at/images/leinaro-logo.svg",
         "url": "https://leinaro.at/",
-        "image": "https://leinaro.at/images/hero-websites-character.png",
+        "image": "https://leinaro.at/images/hero-character.jpg",
         "telephone": "+436603972228",
         "email": "office@leinaro.at",
         "address": {
@@ -44,7 +45,7 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
-    <header class="site-header">
+    <header class="site-header site-header--hero">
       <nav class="nav container" aria-label="Hauptnavigation">
         <a class="brand" href="./" aria-label="Leinaro Startseite"
           ><span class="brand-mark"></span>Leinaro</a
@@ -81,106 +82,55 @@
     </header>
 
     <main id="main">
-      <section class="hero-showcase" aria-labelledby="hero-title">
+      <section class="hero-showcase hero-showcase--image" aria-labelledby="hero-title">
+        <img
+          class="hero-showcase__background"
+          src="images/hero-character.jpg"
+          width="1920"
+          height="1076"
+          alt=""
+          aria-hidden="true"
+          fetchpriority="high"
+          decoding="async"
+        />
         <div class="container hero-showcase__inner">
           <div class="hero-showcase__copy">
-            <p class="hero-showcase__eyebrow">Leinaro <span>Webdesign aus der Steiermark</span></p>
-            <div class="hero-showcase__headline">
-              <h1 id="hero-title">
-                <span class="outline-text">Websites mit</span>
-                <em>Charakter.</em>
-              </h1>
-            </div>
+            <h1 id="hero-title">
+              <span class="outline-text">Websites mit</span><em>Charakter.</em>
+            </h1>
             <p class="hero-showcase__intro">
               Individuelles Webdesign, klare Technik und persönliche Betreuung. Aus Krieglach. Für
               Ihren nächsten Schritt.
             </p>
-            <div class="hero-showcase__actions">
-              <a class="button button--primary" href="kontakt.html"
-                >Projekt anfragen <span aria-hidden="true">↗</span></a
-              ><a class="hero-showcase__work-link" href="referenzen.html">Projekte ansehen</a>
-            </div>
-          </div>
-          <div class="hero-showcase__preview-wrap">
-            <figure
-              class="hero-preview"
-              aria-label="Illustrativer Website-Entwurf für ein Holzbauunternehmen"
-            >
-              <div class="hero-preview__chrome" aria-hidden="true">
-                <span class="hero-preview__dots"><i></i><i></i><i></i></span>
-                <span class="hero-preview__address">Website-Konzept</span>
-                <span class="hero-preview__menu">☰</span>
-              </div>
-              <div class="hero-preview__page">
-                <div class="hero-preview__nav" aria-hidden="true">
-                  <span class="hero-preview__brand">Holzwerk<span>.</span></span>
-                  <span class="hero-preview__nav-items"
-                    >Start <span>Leistungen</span> Über uns <span>Projekte</span></span
-                  >
-                  <span class="hero-preview__contact">Kontakt</span>
-                </div>
-                <div class="hero-preview__body">
-                  <div class="hero-preview__copy">
-                    <p class="hero-preview__eyebrow">Nachhaltig bauen</p>
-                    <p class="hero-preview__title">Räume mit<br /><em>Zukunft.</em></p>
-                    <p class="hero-preview__description">
-                      Wir schaffen Lebensräume aus Holz – nachhaltig, regional und mit Leidenschaft.
-                    </p>
-                    <span class="hero-preview__sample-link" aria-hidden="true"
-                      >Unser Handwerk <span>↗</span></span
-                    >
-                  </div>
-                  <img
-                    class="hero-preview__image"
-                    src="images/optimized/hero-holzwerk-concept-1200.webp"
-                    srcset="
-                      images/optimized/hero-holzwerk-concept-480.webp   480w,
-                      images/optimized/hero-holzwerk-concept-800.webp   800w,
-                      images/optimized/hero-holzwerk-concept-1200.webp 1200w,
-                      images/optimized/hero-holzwerk-concept-1536.webp 1536w
-                    "
-                    sizes="(max-width: 560px) calc(100vw - 5rem), 560px"
-                    width="1536"
-                    height="1024"
-                    fetchpriority="high"
-                    decoding="async"
-                    alt="Illustratives modernes Holzhaus mit großen Glasflächen in einer Berglandschaft"
-                  />
-                </div>
-              </div>
-              <figcaption class="hero-preview__caption">
-                Designkonzept · Beispiel für einen individuellen Webauftritt
-              </figcaption>
-            </figure>
-            <a
-              class="project-orbit"
-              href="kontakt.html"
-              aria-label="Ihr Webprojekt mit Leinaro starten"
-            >
-              <svg
-                class="project-orbit__ring"
-                viewBox="0 0 180 180"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <defs>
-                  <path
-                    id="project-orbit-path"
-                    d="M 90,90 m -68,0 a 68,68 0 1,1 136,0 a 68,68 0 1,1 -136,0"
-                  />
-                </defs>
-                <text>
-                  <textPath href="#project-orbit-path" textLength="427" lengthAdjust="spacing">
-                    PERSÖNLICH GEDACHT · INDIVIDUELL GEMACHT ·
-                  </textPath>
-                </text>
-              </svg>
-              <span class="project-orbit__center"
-                >Projekt<br />starten <span aria-hidden="true">↗</span></span
-              >
-            </a>
           </div>
         </div>
+        <a
+          class="project-orbit"
+          href="kontakt.html"
+          aria-label="Ihr Webprojekt mit Leinaro starten"
+        >
+          <svg
+            class="project-orbit__ring"
+            viewBox="0 0 180 180"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <defs>
+              <path
+                id="project-orbit-path"
+                d="M 90,90 m -68,0 a 68,68 0 1,1 136,0 a 68,68 0 1,1 -136,0"
+              />
+            </defs>
+            <text>
+              <textPath href="#project-orbit-path" textLength="427" lengthAdjust="spacing">
+                PERSÖNLICH GEDACHT · INDIVIDUELL GEMACHT ·
+              </textPath>
+            </text>
+          </svg>
+          <span class="project-orbit__center"
+            >Projekt<br />starten <span aria-hidden="true">↗</span></span
+          >
+        </a>
       </section>
 
       <section class="premium-intro section-surface section-surface--white" id="intro">
