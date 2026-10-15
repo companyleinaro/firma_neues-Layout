@@ -7,6 +7,7 @@
       name="description"
       content="Domain, Hosting und der sichere Onlinegang Ihrer Website – persönlich organisiert von Leinaro."
     />
+    <link rel="preload" href="fonts/poppins-600.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <title>Domain &amp; Hosting für Ihre Website | Leinaro</title>
@@ -17,28 +18,40 @@
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
     <header class="site-header">
       <nav class="nav container" aria-label="Hauptnavigation">
-        <a class="brand" href="./"
+        <a class="brand" href="./" aria-label="Leinaro Startseite"
           ><span class="brand-mark"></span>Leinaro</a
-        ><button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false">
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+        >
           <span></span><span></span><span></span>
         </button>
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-menu">
           <li><a href="./">Start</a></li>
           <li><a href="ueber-uns.html">Über mich</a></li>
           <li class="has-submenu">
-            <button type="button">Leistungen</button>
+            <button class="active" type="button">Leistungen</button>
             <ul class="submenu">
+              <li><a href="leistungen.html">Alle Leistungen</a></li>
               <li><a href="webdesign.html">Webdesign</a></li>
               <li><a href="seo.html">SEO &amp; Sichtbarkeit</a></li>
               <li>
-                <a class="active" href="domain-hosting.html">Domain & Hosting</a>
+                <a class="active" aria-current="page" href="domain-hosting.html"
+                  >Domain &amp; Hosting</a
+                >
               </li>
               <li><a href="betreuung.html">Betreuung</a></li>
             </ul>
           </li>
           <li><a href="referenzen.html">Projekte</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a class="nav-cta" href="kontakt.html">Projekt anfragen</a></li>
+          <li>
+            <a class="nav-cta" href="kontakt.html">Projekt anfragen <span>→</span></a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -56,10 +69,7 @@
               <p class="eyebrow">Einfach organisiert</p>
               <h2>Technik muss nicht <span class="editorial-mark">kompliziert</span> sein.</h2>
             </div>
-            <p>
-              Die technischen Entscheidungen treffe ich nicht einfach irgendwo im Hintergrund. Sie
-              bekommen eine nachvollziehbare Lösung und behalten stets den Überblick.
-            </p>
+            <p>Domain, Hosting und Onlinegang: verständlich erklärt und passend eingerichtet.</p>
           </div>
           <div class="grid-3">
             <div class="service-card service-card--aqua reveal">
@@ -96,13 +106,14 @@
         <div class="container grid-2">
           <div class="reveal">
             <p class="eyebrow">Auch danach erreichbar</p>
-            <h2>Sie müssen nicht selbst zum <span class="editorial-mark">Technikprofi</span> werden.</h2>
+            <h2>
+              Sie müssen nicht selbst zum <span class="editorial-mark">Technikprofi</span> werden.
+            </h2>
           </div>
           <div class="reveal delay-1">
             <p class="lead">
-              Wenn Sie eine Domain haben, die weitergeleitet werden soll, eine E-Mail-Adresse
-              einrichten möchten oder Fragen zum Hosting auftauchen: Sie haben einen direkten
-              Ansprechpartner.
+              Domain umziehen, E-Mail einrichten oder Hosting klären? Ich unterstütze Sie
+              persönlich.
             </p>
             <p class="muted">
               So bleibt der technische Teil Ihres Webauftritts dort, wo er hingehört – zuverlässig
@@ -122,7 +133,14 @@
           </div>
           <a class="button button--primary" href="kontakt.html">Projekt anfragen</a>
           <figure class="cta-panel__visual">
-            <img src="images/hosting-detail.png" width="1086" height="1448" loading="lazy" decoding="async" alt="Sorgfältig organisierte technische Infrastruktur" />
+            <img
+              src="images/hosting-detail.png"
+              width="1086"
+              height="1448"
+              loading="lazy"
+              decoding="async"
+              alt="Sorgfältig organisierte technische Infrastruktur"
+            />
             <figcaption>Für Ihren nächsten Schritt.</figcaption>
           </figure>
         </div>
@@ -133,21 +151,43 @@
         <div class="footer-unified__top">
           <div class="footer-unified__brand">
             <a class="brand footer-brand" href="./" aria-label="Leinaro Startseite"
-              ><span class="brand-mark"></span>Leinaro</a>
+              ><span class="brand-mark"></span>Leinaro</a
+            >
             <p class="muted">WEBDESIGN &middot; SEO &middot; HOSTING</p>
             <nav class="footer-social" aria-label="Social Media">
               <!-- Profil-URLs ergänzen, sobald Instagram und Facebook verfügbar sind. -->
-              <a class="footer-social__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram öffnen (neuer Tab)">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+              <a
+                class="footer-social__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram öffnen (neuer Tab)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <rect x="3" y="3" width="18" height="18" rx="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
                 <span>Instagram</span>
               </a>
-              <a class="footer-social__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook öffnen (neuer Tab)">
+              <a
+                class="footer-social__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook öffnen (neuer Tab)"
+              >
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                  <path d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z" />
+                  <path
+                    d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z"
+                  />
                 </svg>
                 <span>Facebook</span>
               </a>
@@ -176,7 +216,9 @@
         </div>
         <div class="footer-bottom">
           <span>© 2026 Leinaro</span>
-          <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+          <div>
+            <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+          </div>
         </div>
       </div>
     </footer>

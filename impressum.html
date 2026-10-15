@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex,nofollow" />
     <link rel="icon" href="images/leinaro-logo.svg" type="image/svg+xml" />
+    <link rel="preload" href="fonts/poppins-600.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <title>Impressum | Leinaro</title>
@@ -13,9 +14,10 @@
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
     <header class="site-header">
       <nav class="nav container" aria-label="Hauptnavigation">
-        <a class="brand" href="./"
+        <a class="brand" href="./" aria-label="Leinaro Startseite"
           ><span class="brand-mark"></span>Leinaro</a
-        ><button
+        >
+        <button
           class="menu-toggle"
           type="button"
           aria-label="Menü öffnen"
@@ -26,9 +28,22 @@
         </button>
         <ul class="nav-links" id="primary-menu">
           <li><a href="./">Start</a></li>
-          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="ueber-uns.html">Über mich</a></li>
+          <li class="has-submenu">
+            <button type="button">Leistungen</button>
+            <ul class="submenu">
+              <li><a href="leistungen.html">Alle Leistungen</a></li>
+              <li><a href="webdesign.html">Webdesign</a></li>
+              <li><a href="seo.html">SEO &amp; Sichtbarkeit</a></li>
+              <li><a href="domain-hosting.html">Domain &amp; Hosting</a></li>
+              <li><a href="betreuung.html">Betreuung</a></li>
+            </ul>
+          </li>
           <li><a href="referenzen.html">Projekte</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li>
+            <a class="nav-cta" href="kontakt.html">Projekt anfragen <span>→</span></a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -69,8 +84,8 @@
           </p>
           <h3>Grundlegende Richtung</h3>
           <p>
-            Diese Website dient der Information über die Leistungen von Leinaro in den
-            Bereichen Webdesign, Hosting, Website-Betreuung, Suchmaschinenoptimierung und digitaler
+            Diese Website dient der Information über die Leistungen von Leinaro in den Bereichen
+            Webdesign, Hosting, Website-Betreuung, Suchmaschinenoptimierung und digitaler
             Gestaltung.
           </p>
           <h3>Haftung für Inhalte</h3>
@@ -103,17 +118,38 @@
             <p class="muted">WEBDESIGN &middot; SEO &middot; HOSTING</p>
             <nav class="footer-social" aria-label="Social Media">
               <!-- Profil-URLs ergänzen, sobald Instagram und Facebook verfügbar sind. -->
-              <a class="footer-social__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram öffnen (neuer Tab)">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+              <a
+                class="footer-social__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram öffnen (neuer Tab)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <rect x="3" y="3" width="18" height="18" rx="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
                 <span>Instagram</span>
               </a>
-              <a class="footer-social__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook öffnen (neuer Tab)">
+              <a
+                class="footer-social__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook öffnen (neuer Tab)"
+              >
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                  <path d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z" />
+                  <path
+                    d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z"
+                  />
                 </svg>
                 <span>Facebook</span>
               </a>

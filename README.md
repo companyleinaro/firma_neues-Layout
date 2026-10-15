@@ -9,40 +9,58 @@ Statische, responsive Unternehmenswebsite für Leinaro. Die Website benötigt ke
 - `referenzen.html` sowie die zwei Projektseiten – Referenzen
 - `faq.html`, `kontakt.html`, `impressum.html`, `datenschutz.html` – Service- und Rechteseiten
 - `css/style.css` – gesamte Gestaltung in einer Datei
-- `js/script.js` – mobile Navigation, Scroll-Reveals, FAQ-/Cookie-Verhalten und Formularanzeige
+- `js/script.js` – mobile Navigation, mobile Akkordeons, Datenschutzhinweis und Bewegungssteuerung
 - `images/` – hier kommen Logo, Portrait, Projektfotos und das optionale Hero-Video hinein
 
 ## Aktuelles Designsystem
 
-Die Wortmarke liegt als `images/leinaro-logo.svg` vor und wird in Navigation,
-Footer und als Favicon verwendet. Sie stammt aus der gelieferten SVG-Datei;
-lediglich die Zeichenfläche wurde auf das Logo zugeschnitten. Formen und Farben
-sind unverändert. Alte Logo-Dateien bleiben zur Wiederherstellung erhalten.
+Die Gestaltung verbindet die klare Basis von ameisenhaufen.at mit kräftigen
+Farbakzenten und Interaktionen, inspiriert von den gelieferten Rittler-Beispielen.
+Die vorgegebene Palette besteht aus Korallrosa (#F34F7E) als Hauptfarbe, Lime
+(#C8DF70) als Kontrast, Dunkel (#17191C), Hellgrau (#F3F4F6) und Weiß (#FFFFFF).
+Abgeleitete neutrale Grautöne gliedern Text, Linien und dunkle Abschnitte.
+Große Überschriften, Lesetexte und Links sowie kompakte Abstände bleiben
+erhalten. Alle 15 Seiten nutzen css/style.css. Der Header ist auf allen Seiten einheitlich, einschließlich Leistungsmenü und Kontaktbutton. Eine stabile Scrollleistenbreite verhindert seitliche Verschiebungen beim Seitenwechsel. Outline-Pink-Paare wiederholen den Schriftstil des Startseiten-Heros in Seitenköpfen und ausgewählten Abschnitten.
 
-Der zentrierte Startseiten-Hero ist die visuelle Grundlage für alle Seitentypen:
-helle Cremeflächen, Primärfarbe `#D3EE55`, burgunderrote Serifenschrift-Akzente,
-kräftige serifenlose Überschriften, dezente Aqua-Bildrahmen und rechteckige Aktionen.
-Die gemeinsamen Regeln stehen in Abschnitt **18** von `css/style.css`; der
-Startseiten-Hero ist separat in Abschnitt **17** definiert. Gezielte Hervorhebungen
-im Inhalt verwenden `editorial-mark`. Die Schriftarten verwenden lokale Systemfonts,
-ohne externe Font-Anfragen. `images/editorial-spark.svg` enthält den dekorativen Stern.
+Die Seiten, Abschnittsfolge, Leistungen und Kontaktfunktionen bleiben erhalten.
+Der Startseiten-Hero stellt Überschrift und Website-Beispiel nebeneinander;
+mobil stehen sie untereinander. Die Startseite ergänzt einen rotierenden
+Projektkreis, eine nahtlose Laufschrift, einen sanften Textglanz und eine
+leicht schwebende Website-Vorschau. Beim Scrollen blenden Inhalte ein und
+Linien im Ablauf bauen sich auf. Buttons reagieren leicht auf den Mauszeiger;
+Bilder, Portrait und FAQ-Antworten erhalten zusätzliche Übergänge.
+Bei reduzierter Bewegung im Betriebssystem bleiben die Inhalte statisch
+und vollständig sichtbar. Ohne JavaScript sind alle Inhalte direkt lesbar.
+Hover- und Tastaturfokus-Effekte färben Schriften, Buttons und Bildflächen.
+Der Kontaktbereich zeigt das vorhandene Portrait, kräftige Kontaktkarten
+und ein reduziertes Formular. Projekte und ihre Links bleiben direkt sichtbar.
+Das Original-Logo bleibt als Datei erhalten und wird per CSS monochrom dargestellt.
+Poppins wird lokal aus fonts/ geladen (Regular 400, Medium 500, SemiBold 600, Bold 700, ExtraBold 800 und Black 900). Große Überschriften verwenden ExtraBold/Black, Outline-Akzente ExtraBold und Lesetexte Regular/Medium. Die SIL Open Font License liegt in fonts/OFL.txt. Es werden keine externen Schriftdienste geladen.
 
-Abschnitt **19** ergänzt die Feinabstimmung: wechselnde Farb- und Schriftakzente,
-vollständig sichtbare Leistungsbilder ohne Browserleiste, kompakte mobile Intro-Bilder,
-bildgestützte Abschlussbereiche, das Webdesign-Zitat und die gestaltete FAQ-Seite.
-Alle 15 HTML-Seiten verwenden denselben `footer-unified`-Footer. Die zusätzlichen
-Bildflächen nutzen vorhandene Motive; der Startseiten-Hero bleibt unverändert.
+### Bilder ergänzen
 
-Abschnittswechsel erhalten explizite `section-surface--white`, `--cream`, `--aqua`,
-`--leaf` oder `--rose`-Klassen. Die dazugehörigen `--surface-*`-Farben sind zentral
-definiert und gelten identisch auf Desktop und Mobilgeräten. So bleiben Farbwechsel
-bewusst gesetzt, auch wenn später Abschnitte ergänzt oder umsortiert werden.
+Neutrale, beschriftete Bildplatzhalter stehen an folgenden Stellen:
 
-Eine lokale Strukturprüfung kann in PowerShell mit `./tools/validate-site.ps1`
-ausgeführt werden. Sie kontrolliert HTML-Verschachtelung, doppelte IDs, lokale
-Dateien/Sprungziele und CSS-Bildpfade. Sie ersetzt keine visuelle Browserprüfung.
+- Startseite, „Digitales Handwerk“: eigenes Arbeitsplatz- oder Arbeitsfoto.
+- Startseite, Neuburger-Projekt: echte Werkstatt- oder Projektaufnahme.
+- Neuburger-Detailseite: große Projektaufnahme oder Website-Screenshot.
+
+Die Platzhalter sind echte HTML-Elemente mit der Klasse image-placeholder;
+der Hinweis nennt jeweils das passende Bild. Sie können später durch ein
+img-Element ersetzt werden. Die übrigen Motive stammen aus images/ und
+bleiben austauschbar. Bestehende Originaldateien sind erhalten.
+
+Die lokale Strukturprüfung ./tools/validate-site.ps1 kontrolliert die
+HTML-Verschachtelung, doppelte IDs, lokale Dateien/Sprungziele und CSS-Bildpfade.
 
 ## Code in VS Code bearbeiten
+
+Die mobile Leseführung steht im Abschnitt **11. Responsive** von `css/style.css`.
+Bis 600 px Breite werden Leistungsbausteine und Arbeitsschritte über native
+`details`/`summary`-Elemente aufklappbar. `js/script.js` nutzt dafür dieselben
+Inhalte und stellt auf größeren Bildschirmen die ursprüngliche Struktur wieder her.
+Ohne JavaScript bleiben alle Erläuterungen sichtbar. Die Kernaussagen sind gekürzt;
+Leseschrift, Abstände und Formulare wurden für die mobile Darstellung abgestimmt.
 
 Für dieses Projekt sind einheitliche Formatierungsregeln hinterlegt. VS Code empfiehlt beim
 ersten Öffnen automatisch die Erweiterung **Prettier – Code formatter**.

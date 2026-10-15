@@ -7,9 +7,10 @@
       name="description"
       content="Individuelles, responsives und suchmaschinenfreundliches Webdesign für Unternehmen und Vereine in der Steiermark."
     />
-    <meta name="theme-color" content="#fbf9f3" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href="https://leinaro.at/webdesign.html" />
     <link rel="icon" href="images/leinaro-logo.svg" type="image/svg+xml" />
+    <link rel="preload" href="fonts/poppins-600.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <title>Webdesign für Unternehmen in der Steiermark | Leinaro</title>
@@ -18,7 +19,7 @@
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
     <header class="site-header">
       <nav class="nav container" aria-label="Hauptnavigation">
-        <a class="brand" href="./"
+        <a class="brand" href="./" aria-label="Leinaro Startseite"
           ><span class="brand-mark"></span>Leinaro</a
         >
         <button
@@ -33,12 +34,11 @@
         <ul class="nav-links" id="primary-menu">
           <li><a href="./">Start</a></li>
           <li><a href="ueber-uns.html">Über mich</a></li>
-          <li class="has-submenu is-current-section">
+          <li class="has-submenu">
             <button class="active" type="button">Leistungen</button>
             <ul class="submenu">
-              <li>
-                <a class="active" aria-current="page" href="webdesign.html">Webdesign</a>
-              </li>
+              <li><a href="leistungen.html">Alle Leistungen</a></li>
+              <li><a class="active" aria-current="page" href="webdesign.html">Webdesign</a></li>
               <li><a href="seo.html">SEO &amp; Sichtbarkeit</a></li>
               <li><a href="domain-hosting.html">Domain &amp; Hosting</a></li>
               <li><a href="betreuung.html">Betreuung</a></li>
@@ -57,7 +57,10 @@
       <section class="page-hero">
         <div class="container reveal">
           <p class="eyebrow">Leistung 01 · Webdesign</p>
-          <h1>Ein Auftritt, der <span class="lime">nach Ihnen</span> aussieht.</h1>
+          <h1 class="display-pair">
+            <span class="outline-text">Ein Auftritt, der</span>
+            <span class="lime">nach Ihnen</span> aussieht.
+          </h1>
         </div>
       </section>
 
@@ -69,14 +72,10 @@
           </div>
           <div class="reveal delay-1">
             <p class="lead">
-              Eine Website darf gut aussehen. Entscheidend ist aber, dass Besucher sofort verstehen,
-              worum es geht – und den nächsten Schritt gerne machen.
+              Ihre Besucher sollen sofort verstehen, was Sie anbieten – und leicht Kontakt aufnehmen
+              können.
             </p>
-            <p>
-              Deshalb denke ich Gestaltung, Inhalt und Technik zusammen. Klare Strukturen,
-              überzeugende Texte und eine saubere Umsetzung sorgen dafür, dass Ihr Auftritt nicht
-              nur Eindruck macht, sondern für Sie arbeitet.
-            </p>
+            <p>Dafür verbinde ich individuelles Design, klare Texte und saubere Technik.</p>
             <ul class="check-list">
               <li>Individuelles, zu Ihrem Unternehmen passendes Design</li>
               <li>Optimale Darstellung für Smartphone, Tablet und Desktop</li>
@@ -88,7 +87,10 @@
         </div>
       </section>
 
-      <section class="section offer-showcase section-surface section-surface--leaf" aria-labelledby="webdesign-offer-title">
+      <section
+        class="section offer-showcase section-surface section-surface--leaf"
+        aria-labelledby="webdesign-offer-title"
+      >
         <div class="container">
           <div class="offer-showcase__head reveal">
             <p class="eyebrow">Was Sie bekommen</p>
@@ -96,20 +98,14 @@
               <h2 id="webdesign-offer-title">
                 Alles für einen Auftritt, der wirklich zu Ihnen passt.
               </h2>
-              <p>
-                Kein fertiger Baukasten, sondern ein durchdachter Webauftritt: von der ersten Idee
-                bis zur technisch sauberen Veröffentlichung.
-              </p>
+              <p>Von der ersten Idee bis zum Onlinegang: alles persönlich abgestimmt.</p>
             </div>
           </div>
           <div class="offer-showcase__grid">
             <article class="offer-card offer-card--large reveal">
               <span>01</span>
               <h3>Design &amp; Seitenstruktur</h3>
-              <p>
-                Ein individuelles Erscheinungsbild und eine klare Führung, damit Besucher sofort
-                verstehen, wer Sie sind und was Sie anbieten.
-              </p>
+              <p>Eigenes Design und klare Wege durch Ihre Website.</p>
             </article>
             <article class="offer-card reveal delay-1">
               <span>02</span>
@@ -124,7 +120,11 @@
             <article class="offer-card reveal">
               <span>04</span>
               <h3>SEO-Grundlage</h3>
-              <p>Technische und inhaltliche Basis für bessere Auffindbarkeit bei Google. Für eine vertiefte Optimierung können Sie zusätzlich <a class="text-link" href="seo.html">SEO &amp; Sichtbarkeit</a> beauftragen.</p>
+              <p>
+                Technische und inhaltliche Basis für bessere Auffindbarkeit bei Google. Für eine
+                vertiefte Optimierung können Sie zusätzlich
+                <a class="text-link" href="seo.html">SEO &amp; Sichtbarkeit</a> beauftragen.
+              </p>
             </article>
             <article class="offer-card reveal delay-1">
               <span>05</span>
@@ -199,11 +199,12 @@
           </figure>
           <div class="photo-addon__copy reveal delay-1">
             <p class="eyebrow">Portraits &amp; Unternehmensfotos</p>
-            <h2>Auch Ihre Bilder dürfen <span class="editorial-mark">nach Ihnen</span> aussehen.</h2>
+            <h2>
+              Auch Ihre Bilder dürfen <span class="editorial-mark">nach Ihnen</span> aussehen.
+            </h2>
             <p>
-              Auf Wunsch erstelle ich passend zur Website authentische Portraits, Gruppenfotos sowie
-              Arbeits- und Detailaufnahmen. Die Fotoproduktion ist eine optionale Zusatzleistung und
-              wird je nach Umfang separat angeboten.
+              Portraits, Teamfotos und echte Arbeitssituationen – passend zu Ihrer Website. Optional
+              und separat angeboten.
             </p>
             <ul class="check-list">
               <li>Portraits für Team und Ansprechpartner</li>
@@ -225,7 +226,9 @@
               Ihre Website soll sich nicht wie Technik anfühlen. Sie soll sich wie
               <span class="accent">Ihr Unternehmen</span> anfühlen.
             </blockquote>
-            <a class="text-arrow quote-feature__contact" href="kontakt.html">Lassen Sie uns darüber sprechen <span aria-hidden="true">→</span></a>
+            <a class="text-arrow quote-feature__contact" href="kontakt.html"
+              >Lassen Sie uns darüber sprechen <span aria-hidden="true">→</span></a
+            >
           </div>
         </div>
       </section>
@@ -236,21 +239,43 @@
         <div class="footer-unified__top">
           <div class="footer-unified__brand">
             <a class="brand footer-brand" href="./" aria-label="Leinaro Startseite"
-              ><span class="brand-mark"></span>Leinaro</a>
+              ><span class="brand-mark"></span>Leinaro</a
+            >
             <p class="muted">WEBDESIGN &middot; SEO &middot; HOSTING</p>
             <nav class="footer-social" aria-label="Social Media">
               <!-- Profil-URLs ergänzen, sobald Instagram und Facebook verfügbar sind. -->
-              <a class="footer-social__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram öffnen (neuer Tab)">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+              <a
+                class="footer-social__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram öffnen (neuer Tab)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <rect x="3" y="3" width="18" height="18" rx="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
                 <span>Instagram</span>
               </a>
-              <a class="footer-social__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook öffnen (neuer Tab)">
+              <a
+                class="footer-social__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook öffnen (neuer Tab)"
+              >
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                  <path d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z" />
+                  <path
+                    d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z"
+                  />
                 </svg>
                 <span>Facebook</span>
               </a>
@@ -279,7 +304,9 @@
         </div>
         <div class="footer-bottom">
           <span>© 2026 Leinaro</span>
-          <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+          <div>
+            <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+          </div>
         </div>
       </div>
     </footer>

@@ -7,19 +7,17 @@
       name="description"
       content="Leinaro entwickelt hochwertige Websites und digitale Auftritte für Unternehmen, Vereine und Selbstständige in Krieglach, im Mürztal und in der Steiermark."
     />
-    <meta name="theme-color" content="#fbf9f3" />
+    <meta name="theme-color" content="#ffffff" />
     <meta property="og:title" content="Webdesign in Krieglach &amp; der Steiermark | Leinaro" />
     <meta
       property="og:description"
       content="Webdesign, Hosting, SEO und persönliche Betreuung aus der Steiermark."
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://leinaro.at/images/hero-websites-character.png"
-    />
+    <meta property="og:image" content="https://leinaro.at/images/hero-websites-character.png" />
     <link rel="canonical" href="https://leinaro.at/" />
     <link rel="icon" href="images/leinaro-logo.svg" type="image/svg+xml" />
+    <link rel="preload" href="fonts/poppins-600.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <script type="application/ld+json">
@@ -46,7 +44,7 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
-    <header class="site-header site-header--dark">
+    <header class="site-header">
       <nav class="nav container" aria-label="Hauptnavigation">
         <a class="brand" href="./" aria-label="Leinaro Startseite"
           ><span class="brand-mark"></span>Leinaro</a
@@ -61,11 +59,12 @@
           <span></span><span></span><span></span>
         </button>
         <ul class="nav-links" id="primary-menu">
-          <li><a class="active" href="./">Start</a></li>
+          <li><a class="active" aria-current="page" href="./">Start</a></li>
           <li><a href="ueber-uns.html">Über mich</a></li>
           <li class="has-submenu">
             <button type="button">Leistungen</button>
             <ul class="submenu">
+              <li><a href="leistungen.html">Alle Leistungen</a></li>
               <li><a href="webdesign.html">Webdesign</a></li>
               <li><a href="seo.html">SEO &amp; Sichtbarkeit</a></li>
               <li><a href="domain-hosting.html">Domain &amp; Hosting</a></li>
@@ -88,30 +87,25 @@
             <p class="hero-showcase__eyebrow">Leinaro <span>Webdesign aus der Steiermark</span></p>
             <div class="hero-showcase__headline">
               <h1 id="hero-title">
-                <span>Websites mit</span>
+                <span class="outline-text">Websites mit</span>
                 <em>Charakter.</em>
               </h1>
-              <svg class="hero-showcase__spark" viewBox="0 0 120 110" aria-hidden="true" focusable="false">
-                <path d="M52 10H68V40L94 25L102 39L76 54L102 69L94 83L68 68V98H52V68L26 83L18 69L44 54L18 39L26 25L52 40Z" />
-              </svg>
-              <svg class="hero-showcase__rays hero-showcase__rays--left" viewBox="0 0 64 90" aria-hidden="true" focusable="false">
-                <path d="M36 29L19 4M29 49L3 37M31 72L8 82" />
-              </svg>
-              <svg class="hero-showcase__rays hero-showcase__rays--right" viewBox="0 0 64 90" aria-hidden="true" focusable="false">
-                <path d="M13 31L24 7M28 45L51 30" />
-              </svg>
+            </div>
+            <p class="hero-showcase__intro">
+              Individuelles Webdesign, klare Technik und persönliche Betreuung. Aus Krieglach. Für
+              Ihren nächsten Schritt.
+            </p>
+            <div class="hero-showcase__actions">
+              <a class="button button--primary" href="kontakt.html"
+                >Projekt anfragen <span aria-hidden="true">↗</span></a
+              ><a class="hero-showcase__work-link" href="referenzen.html">Projekte ansehen</a>
             </div>
           </div>
           <div class="hero-showcase__preview-wrap">
-            <div class="hero-showcase__annotation hero-showcase__annotation--left" aria-hidden="true">
-              Mehr Sichtbarkeit<br />für Ihr Unternehmen
-              <svg viewBox="0 0 90 70" focusable="false"><path d="M12 3Q22 52 77 50M61 36L78 50L60 64" /></svg>
-            </div>
-            <div class="hero-showcase__annotation hero-showcase__annotation--right" aria-hidden="true">
-              Webdesign<br />aus der Steiermark
-              <svg viewBox="0 0 90 70" focusable="false"><path d="M76 3Q67 52 12 50M29 36L11 50L30 64" /></svg>
-            </div>
-            <figure class="hero-preview" aria-label="Illustrativer Website-Entwurf für ein Holzbauunternehmen">
+            <figure
+              class="hero-preview"
+              aria-label="Illustrativer Website-Entwurf für ein Holzbauunternehmen"
+            >
               <div class="hero-preview__chrome" aria-hidden="true">
                 <span class="hero-preview__dots"><i></i><i></i><i></i></span>
                 <span class="hero-preview__address">Website-Konzept</span>
@@ -120,50 +114,103 @@
               <div class="hero-preview__page">
                 <div class="hero-preview__nav" aria-hidden="true">
                   <span class="hero-preview__brand">Holzwerk<span>.</span></span>
-                  <span class="hero-preview__nav-items">Start <span>Leistungen</span> Über uns <span>Projekte</span></span>
+                  <span class="hero-preview__nav-items"
+                    >Start <span>Leistungen</span> Über uns <span>Projekte</span></span
+                  >
                   <span class="hero-preview__contact">Kontakt</span>
                 </div>
                 <div class="hero-preview__body">
                   <div class="hero-preview__copy">
                     <p class="hero-preview__eyebrow">Nachhaltig bauen</p>
                     <p class="hero-preview__title">Räume mit<br /><em>Zukunft.</em></p>
-                    <p class="hero-preview__description">Wir schaffen Lebensräume aus Holz – nachhaltig, regional und mit Leidenschaft.</p>
-                    <span class="hero-preview__sample-link" aria-hidden="true">Unser Handwerk <span>↗</span></span>
+                    <p class="hero-preview__description">
+                      Wir schaffen Lebensräume aus Holz – nachhaltig, regional und mit Leidenschaft.
+                    </p>
+                    <span class="hero-preview__sample-link" aria-hidden="true"
+                      >Unser Handwerk <span>↗</span></span
+                    >
                   </div>
-                  <img class="hero-preview__image" src="images/optimized/hero-holzwerk-concept-1200.webp"
-                  srcset="images/optimized/hero-holzwerk-concept-480.webp 480w, images/optimized/hero-holzwerk-concept-800.webp 800w, images/optimized/hero-holzwerk-concept-1200.webp 1200w, images/optimized/hero-holzwerk-concept-1536.webp 1536w"
-                  sizes="(max-width: 560px) calc(100vw - 5rem), 560px"
-                    width="1536" height="1024" fetchpriority="high" decoding="async"
-                    alt="Illustratives modernes Holzhaus mit großen Glasflächen in einer Berglandschaft" />
+                  <img
+                    class="hero-preview__image"
+                    src="images/optimized/hero-holzwerk-concept-1200.webp"
+                    srcset="
+                      images/optimized/hero-holzwerk-concept-480.webp   480w,
+                      images/optimized/hero-holzwerk-concept-800.webp   800w,
+                      images/optimized/hero-holzwerk-concept-1200.webp 1200w,
+                      images/optimized/hero-holzwerk-concept-1536.webp 1536w
+                    "
+                    sizes="(max-width: 560px) calc(100vw - 5rem), 560px"
+                    width="1536"
+                    height="1024"
+                    fetchpriority="high"
+                    decoding="async"
+                    alt="Illustratives modernes Holzhaus mit großen Glasflächen in einer Berglandschaft"
+                  />
                 </div>
               </div>
-              <figcaption class="hero-preview__caption">Designkonzept · Beispiel für einen individuellen Webauftritt</figcaption>
+              <figcaption class="hero-preview__caption">
+                Designkonzept · Beispiel für einen individuellen Webauftritt
+              </figcaption>
             </figure>
-            <div class="hero-showcase__preview-badge" aria-hidden="true">
-              <span>↗</span><p>Modernes Webdesign<br />für regional starke Marken.</p>
-            </div>
+            <a
+              class="project-orbit"
+              href="kontakt.html"
+              aria-label="Ihr Webprojekt mit Leinaro starten"
+            >
+              <svg
+                class="project-orbit__ring"
+                viewBox="0 0 180 180"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <defs>
+                  <path
+                    id="project-orbit-path"
+                    d="M 90,90 m -68,0 a 68,68 0 1,1 136,0 a 68,68 0 1,1 -136,0"
+                  />
+                </defs>
+                <text>
+                  <textPath href="#project-orbit-path" textLength="427" lengthAdjust="spacing">
+                    PERSÖNLICH GEDACHT · INDIVIDUELL GEMACHT ·
+                  </textPath>
+                </text>
+              </svg>
+              <span class="project-orbit__center"
+                >Projekt<br />starten <span aria-hidden="true">↗</span></span
+              >
+            </a>
           </div>
         </div>
       </section>
 
       <section class="premium-intro section-surface section-surface--white" id="intro">
         <div class="container premium-intro__grid">
-            <div class="premium-intro__visual reveal">
-              <p class="section-label">Nicht einfach nur online</p>
-              <figure>
-                <img src="images/optimized/intro-first-impression-1200.webp"
-                  srcset="images/optimized/intro-first-impression-480.webp 480w, images/optimized/intro-first-impression-800.webp 800w, images/optimized/intro-first-impression-1200.webp 1200w, images/optimized/intro-first-impression-1536.webp 1536w"
-                  sizes="(max-width: 850px) calc(100vw - 3rem), 600px" width="1536" height="1024"
-                  alt="Kreativer Arbeitsplatz mit Website-Entwurf, Bildideen und Blick auf die Berglandschaft"
-                  loading="lazy" decoding="async" />
-                <figcaption>Ein erster Eindruck mit Persönlichkeit.</figcaption>
-              </figure>
-            </div>
+          <div class="premium-intro__visual reveal">
+            <p class="section-label">Nicht einfach nur online</p>
+            <figure>
+              <img
+                src="images/optimized/intro-first-impression-1200.webp"
+                srcset="
+                  images/optimized/intro-first-impression-480.webp   480w,
+                  images/optimized/intro-first-impression-800.webp   800w,
+                  images/optimized/intro-first-impression-1200.webp 1200w,
+                  images/optimized/intro-first-impression-1536.webp 1536w
+                "
+                sizes="(max-width: 850px) calc(100vw - 3rem), 600px"
+                width="1536"
+                height="1024"
+                alt="Kreativer Arbeitsplatz mit Website-Entwurf, Bildideen und Blick auf die Berglandschaft"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Ein erster Eindruck mit Persönlichkeit.</figcaption>
+            </figure>
+          </div>
           <div class="reveal delay-1">
             <h2>Ihre Website ist <em>der Ort,</em> an dem ein guter erster Eindruck bleibt.</h2>
             <p class="premium-lead">
-              Sie macht sichtbar, was Sie können. Sie erzählt, wer Sie sind. Und sie macht den
-              nächsten Schritt für Ihre Kundinnen und Kunden leicht.
+              Zeigen Sie, was Sie ausmacht. Und machen Sie es Ihren Kunden leicht, Kontakt
+              aufzunehmen.
             </p>
             <a class="text-arrow" href="ueber-uns.html">Mehr über Leinaro <span>→</span></a>
           </div>
@@ -174,13 +221,13 @@
         <div class="container statement-stage__layout">
           <div class="statement-stage__copy reveal">
             <p class="section-label section-label--light">Persönlich statt beliebig</p>
-            <h2>Kein Baukasten.<br /><span>Kein Umweg.</span><br />Ein Auftritt mit Haltung.</h2>
+            <h2>
+              Kein Baukasten.<br /><span class="motion-glow">Kein Umweg.</span><br />Ein Auftritt
+              mit Haltung.
+            </h2>
           </div>
           <div class="statement-stage__facts reveal delay-1">
-            <p>
-              Sie sprechen direkt mit mir. Ich höre zu, denke mit und übersetze technische
-              Möglichkeiten in eine Website, die sich wirklich nach Ihrem Unternehmen anfühlt.
-            </p>
+            <p>Ihre Ideen. Mein Handwerk. Eine Website, die zu Ihrem Unternehmen passt.</p>
             <ul>
               <li><span>01</span>Direkter Ansprechpartner</li>
               <li><span>02</span>Individuell statt vorgefertigt</li>
@@ -188,34 +235,57 @@
             </ul>
           </div>
         </div>
-        <div class="statement-stage__ribbon" aria-hidden="true">
-          <div class="statement-stage__ribbon-track">
-            <span>WEBDESIGN · HOSTING · BETREUUNG · SEO · WEBDESIGN · HOSTING · BETREUUNG · SEO · WEBDESIGN · HOSTING · BETREUUNG · SEO · WEBDESIGN · HOSTING · BETREUUNG · SEO ·</span>
-            <span>WEBDESIGN · HOSTING · BETREUUNG · SEO · WEBDESIGN · HOSTING · BETREUUNG · SEO · WEBDESIGN · HOSTING · BETREUUNG · SEO · WEBDESIGN · HOSTING · BETREUUNG · SEO ·</span>
+        <div
+          class="creative-marquee"
+          role="region"
+          aria-label="Webdesign mit Charakter. Persönlich umgesetzt."
+        >
+          <div class="creative-marquee__track" aria-hidden="true">
+            <div class="creative-marquee__group">
+              <span>WEBDESIGN MIT CHARAKTER</span><span class="creative-marquee__star">✳</span
+              ><span class="creative-marquee__outline">PERSÖNLICH UMGESETZT</span
+              ><span class="creative-marquee__star">✳</span>
+            </div>
+            <div class="creative-marquee__group">
+              <span>WEBDESIGN MIT CHARAKTER</span><span class="creative-marquee__star">✳</span
+              ><span class="creative-marquee__outline">PERSÖNLICH UMGESETZT</span
+              ><span class="creative-marquee__star">✳</span>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="image-narrative section section-surface section-surface--cream">
         <div class="container image-narrative__grid">
-          <div class="image-narrative__image reveal" data-tilt>
-            <img
-              src="images/optimized/studio-workspace-1122.webp"
-                  srcset="images/optimized/studio-workspace-480.webp 480w, images/optimized/studio-workspace-800.webp 800w, images/optimized/studio-workspace-1122.webp 1122w"
-                  sizes="(max-width: 560px) calc(100vw - 3rem), 500px"
-              width="1122"
-              height="1402"
-              alt="Kreativer Arbeitsplatz in der Steiermark" loading="lazy" decoding="async" />
+          <div class="image-narrative__image reveal">
+            <div class="image-placeholder image-placeholder--portrait">
+              <svg
+                class="image-placeholder__icon"
+                viewBox="0 0 40 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="1" y="1" width="38" height="30" />
+                <circle cx="29" cy="9" r="3" />
+                <path d="M2 25L13 14L23 24L29 18L39 28" /></svg
+              ><span class="image-placeholder__label">Bildplatzhalter</span
+              ><strong>Ein Einblick in meine Arbeit.</strong>
+              <p>
+                Hier kommt ein eigenes Foto vom Arbeitsplatz oder von der Arbeit an einem Webprojekt
+                hin.
+              </p>
+            </div>
             <p>Leinaro<br /><span>Aus Krieglach. Für Ihren nächsten Schritt.</span></p>
           </div>
           <div class="image-narrative__copy reveal delay-1">
             <p class="section-label">Digitales Handwerk</p>
-            <h2>Klare Gedanken. <span class="editorial-mark">Starke Bilder.</span> Saubere Technik.</h2>
-            <p>
-              Eine gute Website muss nicht laut sein. Aber sie darf Charakter zeigen, Vertrauen
-              aufbauen und auf jedem Bildschirm mühelos funktionieren. Genau dort treffen sich
-              Gestaltung und Technik.
-            </p>
+            <h2>
+              Klare Gedanken. <span class="editorial-mark">Starke Bilder.</span> Saubere Technik.
+            </h2>
+            <p>Ein klarer Auftritt, der Vertrauen schafft und auf jedem Bildschirm funktioniert.</p>
             <a class="button button--ink" href="webdesign.html">So entsteht Ihre Website</a>
           </div>
         </div>
@@ -231,11 +301,16 @@
             </h2>
           </div>
           <div class="services-cinema__grid services-cinema__grid--four">
-            <a class="cinema-card cinema-card--design reveal" data-tilt href="webdesign.html"
+            <a class="cinema-card cinema-card--design reveal" href="webdesign.html"
               ><span class="cinema-card__media"
                 ><img
                   src="images/optimized/webdesign-devices-1200.webp"
-                  srcset="images/optimized/webdesign-devices-480.webp 480w, images/optimized/webdesign-devices-800.webp 800w, images/optimized/webdesign-devices-1200.webp 1200w, images/optimized/webdesign-devices-1536.webp 1536w"
+                  srcset="
+                    images/optimized/webdesign-devices-480.webp   480w,
+                    images/optimized/webdesign-devices-800.webp   800w,
+                    images/optimized/webdesign-devices-1200.webp 1200w,
+                    images/optimized/webdesign-devices-1536.webp 1536w
+                  "
                   sizes="(max-width: 850px) calc(100vw - 3rem), 600px"
                   width="1536"
                   height="1024"
@@ -247,25 +322,38 @@
               <p>Websites, die ihre eigene Geschichte erzählen.</p>
               <span class="cinema-card__action">Entdecken <b>→</b></span></a
             >
-            <a class="cinema-card cinema-card--seo reveal delay-1" data-tilt href="seo.html">
-              <span class="cinema-card__media"><img src="images/optimized/seo-visibility-1200.webp"
-                  srcset="images/optimized/seo-visibility-480.webp 480w, images/optimized/seo-visibility-800.webp 800w, images/optimized/seo-visibility-1200.webp 1200w, images/optimized/seo-visibility-1536.webp 1536w"
-                  sizes="(max-width: 850px) calc(100vw - 3rem), 600px" width="1536" height="1024"
-                alt="Suchmaschinenoptimierung mit Suchoberfläche, Analysekurve und blauer Glaslupe"
-                loading="lazy" decoding="async" /></span>
+            <a class="cinema-card cinema-card--seo reveal delay-1" href="seo.html">
+              <span class="cinema-card__media"
+                ><img
+                  src="images/optimized/seo-visibility-1200.webp"
+                  srcset="
+                    images/optimized/seo-visibility-480.webp   480w,
+                    images/optimized/seo-visibility-800.webp   800w,
+                    images/optimized/seo-visibility-1200.webp 1200w,
+                    images/optimized/seo-visibility-1536.webp 1536w
+                  "
+                  sizes="(max-width: 850px) calc(100vw - 3rem), 600px"
+                  width="1536"
+                  height="1024"
+                  alt="Suchmaschinenoptimierung mit Suchoberfläche, Analysekurve und blauer Glaslupe"
+                  loading="lazy"
+                  decoding="async"
+              /></span>
               <span class="cinema-card__index">02</span>
               <h3>SEO &amp; Sichtbarkeit</h3>
               <p>Damit die richtigen Menschen Ihren Auftritt entdecken.</p>
               <span class="cinema-card__action">Entdecken <b>→</b></span>
             </a>
-            <a
-              class="cinema-card cinema-card--hosting reveal"
-              data-tilt
-              href="domain-hosting.html"
+            <a class="cinema-card cinema-card--hosting reveal" href="domain-hosting.html"
               ><span class="cinema-card__media"
                 ><img
                   src="images/optimized/hosting-detail-landscape-1200.webp"
-                  srcset="images/optimized/hosting-detail-landscape-480.webp 480w, images/optimized/hosting-detail-landscape-800.webp 800w, images/optimized/hosting-detail-landscape-1200.webp 1200w, images/optimized/hosting-detail-landscape-1536.webp 1536w"
+                  srcset="
+                    images/optimized/hosting-detail-landscape-480.webp   480w,
+                    images/optimized/hosting-detail-landscape-800.webp   800w,
+                    images/optimized/hosting-detail-landscape-1200.webp 1200w,
+                    images/optimized/hosting-detail-landscape-1536.webp 1536w
+                  "
                   sizes="(max-width: 850px) calc(100vw - 3rem), 600px"
                   width="1536"
                   height="1024"
@@ -277,11 +365,16 @@
               <p>Technik im Hintergrund. Sicherheit im Gefühl.</p>
               <span class="cinema-card__action">Entdecken <b>→</b></span></a
             >
-            <a class="cinema-card cinema-card--care reveal delay-1" data-tilt href="betreuung.html"
+            <a class="cinema-card cinema-card--care reveal delay-1" href="betreuung.html"
               ><span class="cinema-card__media"
                 ><img
                   src="images/optimized/collaboration-studio-landscape-1200.webp"
-                  srcset="images/optimized/collaboration-studio-landscape-480.webp 480w, images/optimized/collaboration-studio-landscape-800.webp 800w, images/optimized/collaboration-studio-landscape-1200.webp 1200w, images/optimized/collaboration-studio-landscape-1536.webp 1536w"
+                  srcset="
+                    images/optimized/collaboration-studio-landscape-480.webp   480w,
+                    images/optimized/collaboration-studio-landscape-800.webp   800w,
+                    images/optimized/collaboration-studio-landscape-1200.webp 1200w,
+                    images/optimized/collaboration-studio-landscape-1536.webp 1536w
+                  "
                   sizes="(max-width: 850px) calc(100vw - 3rem), 600px"
                   width="1536"
                   height="1024"
@@ -301,34 +394,57 @@
         <div class="container">
           <div class="work-stage__head reveal">
             <p class="section-label">Ausgewählte Projekte</p>
-            <h2>Unterschiedliche Geschichten. <span>Eigene digitale Räume.</span></h2>
+            <h2 class="display-pair">
+              <span class="outline-text">Unterschiedliche Geschichten.</span>
+              <span class="editorial-mark">Eigene digitale Räume.</span>
+            </h2>
             <a class="text-arrow" href="referenzen.html">Alle Projekte entdecken <span>→</span></a>
           </div>
           <div class="work-mosaic">
-            <a
-              class="mosaic-tile mosaic-tile--main reveal"
-              data-tilt
-              href="hairdesign-barbara-leitner.html"
+            <a class="mosaic-tile mosaic-tile--main reveal" href="hairdesign-barbara-leitner.html"
               ><img
                 src="images/optimized/hairdesign-laptop-mockup-1200.webp"
-                  srcset="images/optimized/hairdesign-laptop-mockup-480.webp 480w, images/optimized/hairdesign-laptop-mockup-800.webp 800w, images/optimized/hairdesign-laptop-mockup-1200.webp 1200w, images/optimized/hairdesign-laptop-mockup-1536.webp 1536w"
-                  sizes="(max-width: 850px) calc(100vw - 3rem), 760px"
+                srcset="
+                  images/optimized/hairdesign-laptop-mockup-480.webp   480w,
+                  images/optimized/hairdesign-laptop-mockup-800.webp   800w,
+                  images/optimized/hairdesign-laptop-mockup-1200.webp 1200w,
+                  images/optimized/hairdesign-laptop-mockup-1536.webp 1536w
+                "
+                sizes="(max-width: 850px) calc(100vw - 3rem), 760px"
                 width="1536"
                 height="1024"
-                alt="Website von Hairdesign Barbara Leitner auf einem Laptop im Salon" loading="lazy" decoding="async" /><span class="mosaic-tile__veil"></span>
+                alt="Website von Hairdesign Barbara Leitner auf einem Laptop im Salon"
+                loading="lazy"
+                decoding="async"
+              />
               <div>
                 <p>Hairdesign Barbara Leitner · 2026</p>
-                <h3>Stil hat<br />eine Bühne.</h3>
+                <h3>Stil hat eine Bühne.</h3>
                 <span>Case Study ansehen →</span>
               </div></a
             ><a
               class="mosaic-tile mosaic-tile--secondary reveal delay-1"
-              data-tilt
               href="neuburger-metalltechnik.html"
-              ><div class="metal-visual"><span>NM</span><i></i><i></i></div>
+              ><div class="image-placeholder image-placeholder--project">
+                <svg
+                  class="image-placeholder__icon"
+                  viewBox="0 0 40 32"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <rect x="1" y="1" width="38" height="30" />
+                  <circle cx="29" cy="9" r="3" />
+                  <path d="M2 25L13 14L23 24L29 18L39 28" /></svg
+                ><span class="image-placeholder__label">Bildplatzhalter</span
+                ><strong>Neuburger Metalltechnik</strong>
+                <p>Hier kommt eine echte Werkstatt- oder Projektaufnahme hin.</p>
+              </div>
               <div>
                 <p>Neuburger Metalltechnik · 2026</p>
-                <h3>Präzision<br />sichtbar gemacht.</h3>
+                <h3>Präzision sichtbar gemacht.</h3>
                 <span>Case Study ansehen →</span>
               </div></a
             >
@@ -341,10 +457,12 @@
           <div class="process-premium__top reveal">
             <p class="section-label">Wie wir zusammenarbeiten</p>
             <div>
-              <h2>Ihr Projekt bleibt <span class="editorial-mark">persönlich</span> – vom ersten Gespräch bis zum Onlinegang.</h2>
+              <h2>
+                Ihr Projekt bleibt <span class="editorial-mark">persönlich</span> – vom ersten
+                Gespräch bis zum Onlinegang.
+              </h2>
               <p class="process-premium__intro">
-                Sie sprechen während des gesamten Projekts direkt mit mir. Wir treffen
-                Entscheidungen gemeinsam, in verständlichen Schritten und ohne unnötige Umwege.
+                Ein Ansprechpartner. Klare Schritte. Gemeinsame Entscheidungen.
               </p>
             </div>
           </div>
@@ -352,22 +470,25 @@
             <figure>
               <img
                 src="images/optimized/personal-consultation-1200.webp"
-                  srcset="images/optimized/personal-consultation-480.webp 480w, images/optimized/personal-consultation-800.webp 800w, images/optimized/personal-consultation-1200.webp 1200w, images/optimized/personal-consultation-1672.webp 1672w"
-                  sizes="(max-width: 850px) calc(100vw - 3rem), 700px"
+                srcset="
+                  images/optimized/personal-consultation-480.webp   480w,
+                  images/optimized/personal-consultation-800.webp   800w,
+                  images/optimized/personal-consultation-1200.webp 1200w,
+                  images/optimized/personal-consultation-1672.webp 1672w
+                "
+                sizes="(max-width: 850px) calc(100vw - 3rem), 700px"
                 width="1672"
                 height="941"
                 loading="lazy"
-                alt="Illustrative Szene eines persönlichen Beratungsgesprächs zu einem Webprojekt" decoding="async" />
+                alt="Illustrative Szene eines persönlichen Beratungsgesprächs zu einem Webprojekt"
+                decoding="async"
+              />
               <figcaption>Persönlich besprochen. Verständlich entschieden.</figcaption>
             </figure>
             <div>
               <p class="section-label section-label--light">Direkter Austausch</p>
               <h3>Sie wissen immer, mit wem Sie sprechen.</h3>
-              <p>
-                Keine wechselnden Zuständigkeiten und kein Fachchinesisch: Wir besprechen Ihr
-                Projekt direkt, schauen gemeinsam auf Entwürfe und treffen Entscheidungen, die zu
-                Ihrem Unternehmen passen.
-              </p>
+              <p>Wir besprechen Ideen und Entwürfe direkt – persönlich und verständlich.</p>
             </div>
           </div>
           <ol class="process-premium__rail reveal">
@@ -412,7 +533,9 @@
         <div class="container">
           <div class="faq-premium__head reveal">
             <p class="section-label">Fragen, bevor sie entstehen</p>
-            <h2>Gut zu <span class="editorial-mark">wissen.</span></h2>
+            <h2 class="display-pair">
+              <span class="outline-text">Gut zu</span> <span class="editorial-mark">wissen.</span>
+            </h2>
           </div>
           <div class="faq faq--premium reveal">
             <details class="faq-item">
@@ -464,11 +587,19 @@
         <div class="closing-stage__image">
           <img
             src="images/optimized/hero-digital-studio-1200.webp"
-                  srcset="images/optimized/hero-digital-studio-480.webp 480w, images/optimized/hero-digital-studio-800.webp 800w, images/optimized/hero-digital-studio-1200.webp 1200w, images/optimized/hero-digital-studio-1672.webp 1672w"
-                  sizes="100vw"
+            srcset="
+              images/optimized/hero-digital-studio-480.webp   480w,
+              images/optimized/hero-digital-studio-800.webp   800w,
+              images/optimized/hero-digital-studio-1200.webp 1200w,
+              images/optimized/hero-digital-studio-1672.webp 1672w
+            "
+            sizes="100vw"
             width="1672"
             height="941"
-            alt="Laptop mit abstrahiertem digitalen Design im Studio" loading="lazy" decoding="async" />
+            alt="Laptop mit abstrahiertem digitalen Design im Studio"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div class="container closing-stage__content reveal">
           <p class="section-label section-label--light">Ihr nächster Schritt</p>
@@ -486,21 +617,43 @@
         <div class="footer-unified__top">
           <div class="footer-unified__brand">
             <a class="brand footer-brand" href="./" aria-label="Leinaro Startseite"
-              ><span class="brand-mark"></span>Leinaro</a>
+              ><span class="brand-mark"></span>Leinaro</a
+            >
             <p class="muted">WEBDESIGN &middot; SEO &middot; HOSTING</p>
             <nav class="footer-social" aria-label="Social Media">
               <!-- Profil-URLs ergänzen, sobald Instagram und Facebook verfügbar sind. -->
-              <a class="footer-social__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram öffnen (neuer Tab)">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+              <a
+                class="footer-social__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram öffnen (neuer Tab)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <rect x="3" y="3" width="18" height="18" rx="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
                 <span>Instagram</span>
               </a>
-              <a class="footer-social__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook öffnen (neuer Tab)">
+              <a
+                class="footer-social__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook öffnen (neuer Tab)"
+              >
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                  <path d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z" />
+                  <path
+                    d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z"
+                  />
                 </svg>
                 <span>Facebook</span>
               </a>
@@ -529,20 +682,31 @@
         </div>
         <div class="footer-bottom">
           <span>© 2026 Leinaro</span>
-          <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+          <div>
+            <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+          </div>
         </div>
       </div>
     </footer>
-    <dialog class="cookie-banner" hidden aria-labelledby="cookie-note-title" aria-describedby="cookie-note-description">
+    <dialog
+      class="cookie-banner"
+      hidden
+      aria-labelledby="cookie-note-title"
+      aria-describedby="cookie-note-description"
+    >
       <div class="cookie-banner__content">
         <span class="cookie-banner__eyebrow">Ihre Privatsphäre</span>
-        <h2 id="cookie-note-title" tabindex="-1" autofocus>Ein kurzer<br /><em>Datenschutzhinweis.</em></h2>
+        <h2 id="cookie-note-title" tabindex="-1" autofocus>
+          Ein kurzer<br /><em>Datenschutzhinweis.</em>
+        </h2>
         <p id="cookie-note-description">
-          Diese Website verwendet keine Analyse- oder Marketing-Cookies. Es wird lediglich lokal
-          in Ihrem Browser gespeichert, dass Sie diesen Hinweis geschlossen haben.
+          Diese Website verwendet keine Analyse- oder Marketing-Cookies. Es wird lediglich lokal in
+          Ihrem Browser gespeichert, dass Sie diesen Hinweis geschlossen haben.
         </p>
         <div class="cookie-banner__actions">
-          <button class="button button--primary" type="button" data-cookie-choice>Verstanden <span aria-hidden="true">→</span></button>
+          <button class="button button--primary" type="button" data-cookie-choice>
+            Verstanden <span aria-hidden="true">→</span>
+          </button>
           <a href="datenschutz.html">Datenschutz lesen</a>
         </div>
       </div>

@@ -12,10 +12,8 @@
     <link rel="icon" href="images/leinaro-logo.svg" type="image/svg+xml" />
     <meta property="og:title" content="Projekt anfragen | Leinaro" />
     <meta property="og:description" content="Erzählen Sie mir von Ihrem Webprojekt." />
-    <meta
-      property="og:image"
-      content="https://leinaro.at/images/hero-digital-studio.png"
-    />
+    <meta property="og:image" content="https://leinaro.at/images/hero-digital-studio.png" />
+    <link rel="preload" href="fonts/poppins-600.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <script src="js/contact-form.js" defer></script>
@@ -25,9 +23,10 @@
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
     <header class="site-header">
       <nav class="nav container" aria-label="Hauptnavigation">
-        <a class="brand" href="./"
+        <a class="brand" href="./" aria-label="Leinaro Startseite"
           ><span class="brand-mark"></span>Leinaro</a
-        ><button
+        >
+        <button
           class="menu-toggle"
           type="button"
           aria-label="Menü öffnen"
@@ -42,6 +41,7 @@
           <li class="has-submenu">
             <button type="button">Leistungen</button>
             <ul class="submenu">
+              <li><a href="leistungen.html">Alle Leistungen</a></li>
               <li><a href="webdesign.html">Webdesign</a></li>
               <li><a href="seo.html">SEO &amp; Sichtbarkeit</a></li>
               <li><a href="domain-hosting.html">Domain &amp; Hosting</a></li>
@@ -51,7 +51,9 @@
           <li><a href="referenzen.html">Projekte</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li>
-            <a class="nav-cta active" href="kontakt.html">Projekt anfragen <span>→</span></a>
+            <a class="nav-cta active" aria-current="page" href="kontakt.html"
+              >Projekt anfragen <span>→</span></a
+            >
           </li>
         </ul>
       </nav>
@@ -60,18 +62,41 @@
       <section class="page-hero">
         <div class="container reveal">
           <p class="eyebrow">Kontakt</p>
-          <h1>Erzählen Sie mir von <span class="lime">Ihrem Projekt.</span></h1>
+          <h1 class="display-pair">
+            <span class="outline-text">Erzählen Sie mir von</span>
+            <span class="lime">Ihrem Projekt.</span>
+          </h1>
         </div>
       </section>
       <section class="section contact-section section-surface section-surface--aqua">
         <div class="container contact-layout">
           <div class="contact-intro reveal">
             <p class="eyebrow">Direkt erreichbar</p>
-            <h2>Der erste Schritt ist <span class="editorial-mark">ganz einfach.</span></h2>
+            <h2 class="display-pair">
+              <span class="outline-text">Der erste Schritt ist</span>
+              <span class="editorial-mark">ganz einfach.</span>
+            </h2>
             <p class="lead">
               Sie können das Formular nutzen, anrufen oder eine E-Mail schreiben. Ich melde mich
               persönlich bei Ihnen zurück.
             </p>
+            <div class="contact-person">
+              <figure class="contact-person__portrait">
+                <img
+                  src="images/christoph_foto.jpg"
+                  width="632"
+                  height="609"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Christoph Leitner, Ihr Ansprechpartner bei Leinaro"
+                />
+              </figure>
+              <div class="contact-person__copy">
+                <p>Christoph Leitner</p>
+                <span>Ihr direkter Ansprechpartner.</span
+                ><span class="contact-person__arrow" aria-hidden="true">⟶</span>
+              </div>
+            </div>
             <div class="contact-methods">
               <a class="contact-method contact-method--phone" href="tel:+436603972228"
                 ><span>Telefon</span><strong>+43 660 3972228</strong
@@ -96,11 +121,7 @@
             method="POST"
             accept-charset="UTF-8"
           >
-            <input
-              type="hidden"
-              name="subject"
-              value="Projektanfrage - Leinaro"
-            />
+            <input type="hidden" name="subject" value="Projektanfrage - Leinaro" />
             <input type="hidden" name="access_key" value="1f7cf8d1-67d5-43d1-8305-74ea0019b5f4" />
             <input type="hidden" name="from_name" value="Leinaro Kontaktformular" />
             <input
@@ -161,11 +182,25 @@
               ></label
             >
             <div class="contact-form__footer">
-              <button class="button button--primary" type="submit" disabled>Nachricht senden</button>
+              <button class="button button--primary" type="submit" disabled>
+                Nachricht senden
+              </button>
               <p class="image-note">Sie erhalten nach dem Versand direkt hier eine Bestätigung.</p>
             </div>
-            <p class="contact-form__status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" hidden></p>
-            <noscript><p class="image-note">Bitte aktivieren Sie JavaScript für das Formular oder schreiben Sie an <a href="mailto:office@leinaro.at">office@leinaro.at</a>.</p></noscript>
+            <p
+              class="contact-form__status"
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+              tabindex="-1"
+              hidden
+            ></p>
+            <noscript
+              ><p class="image-note">
+                Bitte aktivieren Sie JavaScript für das Formular oder schreiben Sie an
+                <a href="mailto:office@leinaro.at">office@leinaro.at</a>.
+              </p></noscript
+            >
           </form>
         </div>
       </section>
@@ -175,21 +210,43 @@
         <div class="footer-unified__top">
           <div class="footer-unified__brand">
             <a class="brand footer-brand" href="./" aria-label="Leinaro Startseite"
-              ><span class="brand-mark"></span>Leinaro</a>
+              ><span class="brand-mark"></span>Leinaro</a
+            >
             <p class="muted">WEBDESIGN &middot; SEO &middot; HOSTING</p>
             <nav class="footer-social" aria-label="Social Media">
               <!-- Profil-URLs ergänzen, sobald Instagram und Facebook verfügbar sind. -->
-              <a class="footer-social__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram öffnen (neuer Tab)">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+              <a
+                class="footer-social__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram öffnen (neuer Tab)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <rect x="3" y="3" width="18" height="18" rx="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
                 <span>Instagram</span>
               </a>
-              <a class="footer-social__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook öffnen (neuer Tab)">
+              <a
+                class="footer-social__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook öffnen (neuer Tab)"
+              >
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                  <path d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z" />
+                  <path
+                    d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z"
+                  />
                 </svg>
                 <span>Facebook</span>
               </a>
@@ -218,7 +275,9 @@
         </div>
         <div class="footer-bottom">
           <span>© 2026 Leinaro</span>
-          <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+          <div>
+            <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+          </div>
         </div>
       </div>
     </footer>

@@ -7,9 +7,10 @@
       name="description"
       content="SEO, technische Suchmaschinenoptimierung und Local SEO für Unternehmen in Krieglach, im Mürztal und in der Steiermark. Persönlich begleitet von Leinaro."
     />
-    <meta name="theme-color" content="#fbf9f3" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href="https://leinaro.at/seo.html" />
     <link rel="icon" href="images/leinaro-logo.svg" type="image/svg+xml" />
+    <link rel="preload" href="fonts/poppins-600.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <title>SEO &amp; Local SEO in Krieglach und der Steiermark | Leinaro</title>
@@ -18,7 +19,7 @@
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
     <header class="site-header">
       <nav class="nav container" aria-label="Hauptnavigation">
-        <a class="brand" href="./"
+        <a class="brand" href="./" aria-label="Leinaro Startseite"
           ><span class="brand-mark"></span>Leinaro</a
         >
         <button
@@ -33,13 +34,14 @@
         <ul class="nav-links" id="primary-menu">
           <li><a href="./">Start</a></li>
           <li><a href="ueber-uns.html">Über mich</a></li>
-          <li class="has-submenu is-current-section">
+          <li class="has-submenu">
             <button class="active" type="button">Leistungen</button>
             <ul class="submenu">
+              <li><a href="leistungen.html">Alle Leistungen</a></li>
+              <li><a href="webdesign.html">Webdesign</a></li>
               <li>
-                <a href="webdesign.html">Webdesign</a>
+                <a class="active" aria-current="page" href="seo.html">SEO &amp; Sichtbarkeit</a>
               </li>
-              <li><a class="active" aria-current="page" href="seo.html">SEO &amp; Sichtbarkeit</a></li>
               <li><a href="domain-hosting.html">Domain &amp; Hosting</a></li>
               <li><a href="betreuung.html">Betreuung</a></li>
             </ul>
@@ -57,48 +59,147 @@
       <section class="page-hero">
         <div class="container reveal">
           <p class="eyebrow">Leistung 02 · SEO &amp; Sichtbarkeit</p>
-          <h1>Gefunden werden. <span class="lime">Die Richtigen erreichen.</span></h1>
+          <h1 class="display-pair">
+            <span class="outline-text">Gefunden werden.</span>
+            <span class="lime">Die Richtigen erreichen.</span>
+          </h1>
         </div>
       </section>
       <section class="section section-surface section-surface--white">
         <div class="container grid-2">
-          <div class="reveal"><p class="eyebrow">Sichtbarkeit mit Substanz</p><h2>Ihre Kunden suchen. Ihre Website gibt <span class="editorial-mark">Antworten.</span></h2></div>
+          <div class="reveal">
+            <p class="eyebrow">Sichtbarkeit mit Substanz</p>
+            <h2>
+              Ihre Kunden suchen. Ihre Website gibt <span class="editorial-mark">Antworten.</span>
+            </h2>
+          </div>
           <div class="reveal delay-1">
-            <p class="lead">Was geben Menschen bei Google ein, wenn sie nach Ihrem Angebot suchen? Genau dort setzen wir an – mit passenden Inhalten, einer klaren Struktur und einer technisch sauberen Website.</p>
-            <p>Ob neuer Webauftritt oder bestehende Website: Ich prüfe die Ausgangslage, zeige verständlich die nächsten Schritte und konzentriere mich auf Verbesserungen, die zu Ihrem Unternehmen passen.</p>
-            <ul class="check-list"><li>Suchbegriffe passend zu Ihrem Angebot und Ihrer Region</li><li>Verständliche Inhalte für echte Fragen Ihrer Kunden</li><li>Technische Optimierung und klare Seitenstruktur</li><li>Lokale Sichtbarkeit in Krieglach, im Mürztal und darüber hinaus</li></ul>
+            <p class="lead">
+              Erreichen Sie Menschen, die nach Ihrem Angebot suchen – mit klaren Inhalten und
+              sauberer Technik.
+            </p>
+            <p>Ich prüfe Ihre Website und zeige, welche Verbesserungen für Sie sinnvoll sind.</p>
+            <ul class="check-list">
+              <li>Suchbegriffe passend zu Ihrem Angebot und Ihrer Region</li>
+              <li>Verständliche Inhalte für echte Fragen Ihrer Kunden</li>
+              <li>Technische Optimierung und klare Seitenstruktur</li>
+              <li>Lokale Sichtbarkeit in Krieglach, im Mürztal und darüber hinaus</li>
+            </ul>
           </div>
         </div>
       </section>
       <section class="section offer-showcase section-surface section-surface--leaf">
         <div class="container">
-          <div class="offer-showcase__head reveal"><p class="eyebrow">Was ich für Sie umsetze</p><div><h2>Vier Bausteine für <span class="editorial-mark">bessere Auffindbarkeit.</span></h2><p>Der Umfang richtet sich nach Ihrer Website, Ihrem Angebot und Ihren Zielen. Sie erhalten ein individuelles Angebot mit klaren Prioritäten.</p></div></div>
+          <div class="offer-showcase__head reveal">
+            <p class="eyebrow">Was ich für Sie umsetze</p>
+            <div>
+              <h2>
+                Vier Bausteine für <span class="editorial-mark">bessere Auffindbarkeit.</span>
+              </h2>
+              <p>Sie erhalten ein individuelles Angebot mit klaren Prioritäten.</p>
+            </div>
+          </div>
           <div class="seo-offer-grid">
-            <article class="offer-card reveal"><span>01</span><h3>Analyse &amp; Suchbegriffe</h3><p>Bestandsaufnahme Ihrer Website und Recherche, wie Ihre Zielgruppe nach Ihren Leistungen sucht. Daraus entsteht ein konkreter Maßnahmenplan.</p></article>
-            <article class="offer-card reveal delay-1"><span>02</span><h3>Inhalte &amp; Struktur</h3><p>Passende Seitentitel, Beschreibungen, Überschriften und interne Links. Inhalte werden klarer, hilfreicher und auf relevante Suchanfragen abgestimmt.</p></article>
-            <article class="offer-card reveal"><span>03</span><h3>Technische SEO</h3><p>Prüfung von Indexierbarkeit, Ladezeiten, mobiler Darstellung, Sitemap und technischen Seiteneinstellungen – mit gezielten Verbesserungen.</p></article>
-            <article class="offer-card reveal delay-1"><span>04</span><h3>Local SEO</h3><p>Ein klarer regionaler Bezug und Unterstützung beim Google-Unternehmensprofil, damit Menschen in Ihrer Umgebung Ihr Angebot leichter entdecken.</p></article>
+            <article class="offer-card reveal">
+              <span>01</span>
+              <h3>Analyse &amp; Suchbegriffe</h3>
+              <p>Website prüfen, relevante Suchbegriffe finden und nächste Schritte festlegen.</p>
+            </article>
+            <article class="offer-card reveal delay-1">
+              <span>02</span>
+              <h3>Inhalte &amp; Struktur</h3>
+              <p>Klare Texte, passende Seitentitel und eine verständliche Seitenstruktur.</p>
+            </article>
+            <article class="offer-card reveal">
+              <span>03</span>
+              <h3>Technische SEO</h3>
+              <p>Ladezeiten, mobile Darstellung und Auffindbarkeit technisch verbessern.</p>
+            </article>
+            <article class="offer-card reveal delay-1">
+              <span>04</span>
+              <h3>Local SEO</h3>
+              <p>
+                Regional sichtbar werden – mit lokalem Bezug und Ihrem Google-Unternehmensprofil.
+              </p>
+            </article>
           </div>
         </div>
       </section>
       <section class="section seo-story section-surface section-surface--aqua">
         <div class="container grid-2">
-          <figure class="seo-story__image reveal"><img src="images/seo-visibility.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Illustratives SEO-Motiv mit Suchoberfläche, Analysekurve und blauer Glaslupe" /></figure>
-          <div class="reveal delay-1"><p class="eyebrow">Nachvollziehbar statt nebulös</p><h2>Ein klarer Weg. Ein <span class="editorial-mark">realistischer Blick.</span></h2><p class="lead">Wir starten mit den wichtigsten Verbesserungen und schauen anschließend, wie sich Ihr Auftritt entwickelt.</p><p>Auf Wunsch unterstütze ich Sie bei der Einrichtung der Google Search Console und bei der regelmäßigen Auswertung von Suchanfragen, Klicks und sichtbaren Seiten. Daraus leiten wir die nächsten Schritte ab.</p><p>SEO braucht Zeit und laufende Pflege. Eine bestimmte Platzierung oder eine feste Anzahl an Anfragen kann ich nicht garantieren – klare Maßnahmen und verständliche Beratung schon.</p></div>
+          <figure class="seo-story__image reveal">
+            <img
+              src="images/seo-visibility.png"
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+              alt="Illustratives SEO-Motiv mit Suchoberfläche, Analysekurve und blauer Glaslupe"
+            />
+          </figure>
+          <div class="reveal delay-1">
+            <p class="eyebrow">Nachvollziehbar statt nebulös</p>
+            <h2>Ein klarer Weg. Ein <span class="editorial-mark">realistischer Blick.</span></h2>
+            <p class="lead">
+              Wir starten mit den wichtigsten Verbesserungen und schauen anschließend, wie sich Ihr
+              Auftritt entwickelt.
+            </p>
+            <p>
+              Auf Wunsch richten wir die Google Search Console ein und werten Suchanfragen und
+              Klicks gemeinsam aus.
+            </p>
+            <p>
+              SEO braucht Zeit. Feste Platzierungen oder Anfragen kann ich nicht garantieren –
+              nachvollziehbare Maßnahmen schon.
+            </p>
+          </div>
         </div>
       </section>
-      <section class="section section-surface section-surface--white"><div class="container"><div class="faq reveal">
-        <details class="faq-item"><summary>Ist SEO schon im Webdesign enthalten?</summary><p>Die grundlegende suchmaschinenfreundliche Umsetzung ist Teil meines Webdesigns. Eine vertiefte Analyse, gezielte Inhaltsoptimierung, Local SEO und laufende Auswertung können Sie zusätzlich beauftragen.</p></details>
-        <details class="faq-item"><summary>Kann auch meine bestehende Website optimiert werden?</summary><p>Ja. Zuerst prüfe ich, welche Verbesserungen sinnvoll und technisch möglich sind. Auf dieser Grundlage erhalten Sie ein konkretes Angebot.</p></details>
-        <details class="faq-item"><summary>Wann sind Ergebnisse zu erwarten?</summary><p>Das hängt von Ausgangslage, Wettbewerb und Umfang der Maßnahmen ab. Veränderungen entstehen meist über mehrere Wochen oder Monate. Wir vereinbaren realistische Ziele und betrachten die Entwicklung gemeinsam.</p></details>
-      </div></div></section>
+      <section class="section section-surface section-surface--white">
+        <div class="container">
+          <div class="faq reveal">
+            <details class="faq-item">
+              <summary>Ist SEO schon im Webdesign enthalten?</summary>
+              <p>
+                Die grundlegende suchmaschinenfreundliche Umsetzung ist Teil meines Webdesigns. Eine
+                vertiefte Analyse, gezielte Inhaltsoptimierung, Local SEO und laufende Auswertung
+                können Sie zusätzlich beauftragen.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Kann auch meine bestehende Website optimiert werden?</summary>
+              <p>
+                Ja. Zuerst prüfe ich, welche Verbesserungen sinnvoll und technisch möglich sind. Auf
+                dieser Grundlage erhalten Sie ein konkretes Angebot.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Wann sind Ergebnisse zu erwarten?</summary>
+              <p>
+                Das hängt von Ausgangslage, Wettbewerb und Umfang der Maßnahmen ab. Veränderungen
+                entstehen meist über mehrere Wochen oder Monate. Wir vereinbaren realistische Ziele
+                und betrachten die Entwicklung gemeinsam.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
       <section class="cta-band section-surface section-surface--cream">
         <div class="container cta-panel">
-          <div class="cta-panel__copy"><p class="eyebrow">Mehr aus Ihrem Auftritt machen</p><h2>Lassen Sie uns Ihre Sichtbarkeit anschauen.</h2>
+          <div class="cta-panel__copy">
+            <p class="eyebrow">Mehr aus Ihrem Auftritt machen</p>
+            <h2>Lassen Sie uns Ihre Sichtbarkeit anschauen.</h2>
           </div>
           <a class="button button--primary" href="kontakt.html">SEO besprechen</a>
           <figure class="cta-panel__visual">
-            <img src="images/seo-visibility.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Suchoberfläche, Analysekurve und blaue Glaslupe als SEO-Motiv" />
+            <img
+              src="images/seo-visibility.png"
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+              alt="Suchoberfläche, Analysekurve und blaue Glaslupe als SEO-Motiv"
+            />
             <figcaption>Für Ihren nächsten Schritt.</figcaption>
           </figure>
         </div>
@@ -110,21 +211,43 @@
         <div class="footer-unified__top">
           <div class="footer-unified__brand">
             <a class="brand footer-brand" href="./" aria-label="Leinaro Startseite"
-              ><span class="brand-mark"></span>Leinaro</a>
+              ><span class="brand-mark"></span>Leinaro</a
+            >
             <p class="muted">WEBDESIGN &middot; SEO &middot; HOSTING</p>
             <nav class="footer-social" aria-label="Social Media">
               <!-- Profil-URLs ergänzen, sobald Instagram und Facebook verfügbar sind. -->
-              <a class="footer-social__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram öffnen (neuer Tab)">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+              <a
+                class="footer-social__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram öffnen (neuer Tab)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <rect x="3" y="3" width="18" height="18" rx="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
                 <span>Instagram</span>
               </a>
-              <a class="footer-social__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook öffnen (neuer Tab)">
+              <a
+                class="footer-social__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook öffnen (neuer Tab)"
+              >
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                  <path d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z" />
+                  <path
+                    d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z"
+                  />
                 </svg>
                 <span>Facebook</span>
               </a>
@@ -153,7 +276,9 @@
         </div>
         <div class="footer-bottom">
           <span>© 2026 Leinaro</span>
-          <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+          <div>
+            <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+          </div>
         </div>
       </div>
     </footer>

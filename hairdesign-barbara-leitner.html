@@ -7,6 +7,7 @@
       name="description"
       content="Projekt Hairdesign Barbara Leitner – Webdesign von Leinaro."
     />
+    <link rel="preload" href="fonts/poppins-600.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <title>Webdesign für Hairdesign Barbara Leitner | Leinaro</title>
@@ -17,18 +18,36 @@
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
     <header class="site-header">
       <nav class="nav container" aria-label="Hauptnavigation">
-        <a class="brand" href="./"
+        <a class="brand" href="./" aria-label="Leinaro Startseite"
           ><span class="brand-mark"></span>Leinaro</a
-        ><button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false">
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+        >
           <span></span><span></span><span></span>
         </button>
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-menu">
           <li><a href="./">Start</a></li>
           <li><a href="ueber-uns.html">Über mich</a></li>
-          <li><a href="leistungen.html">Leistungen</a></li>
+          <li class="has-submenu">
+            <button type="button">Leistungen</button>
+            <ul class="submenu">
+              <li><a href="leistungen.html">Alle Leistungen</a></li>
+              <li><a href="webdesign.html">Webdesign</a></li>
+              <li><a href="seo.html">SEO &amp; Sichtbarkeit</a></li>
+              <li><a href="domain-hosting.html">Domain &amp; Hosting</a></li>
+              <li><a href="betreuung.html">Betreuung</a></li>
+            </ul>
+          </li>
           <li><a class="active" href="referenzen.html">Projekte</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a class="nav-cta" href="kontakt.html">Projekt anfragen</a></li>
+          <li>
+            <a class="nav-cta" href="kontakt.html">Projekt anfragen <span>→</span></a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -36,7 +55,9 @@
       <section class="page-hero">
         <div class="container reveal">
           <p class="eyebrow">Referenz · 2026 · Krieglach</p>
-          <h1>Hairdesign <span class="lime">Barbara Leitner</span></h1>
+          <h1 class="display-pair">
+            <span class="outline-text">Hairdesign</span> <span class="lime">Barbara Leitner</span>
+          </h1>
         </div>
       </section>
       <section class="section section--tight section-surface section-surface--white">
@@ -93,7 +114,14 @@
             >Weiter zum Projekt</a
           >
           <figure class="cta-panel__visual">
-            <img src="images/neuburger-phone-hand-mockup.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Smartphone mit dem Neuburger-Metalltechnik-Logo in einer Metallwerkstatt" />
+            <img
+              src="images/neuburger-phone-hand-mockup.png"
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+              alt="Smartphone mit dem Neuburger-Metalltechnik-Logo in einer Metallwerkstatt"
+            />
             <figcaption>Für Ihren nächsten Schritt.</figcaption>
           </figure>
         </div>
@@ -104,21 +132,43 @@
         <div class="footer-unified__top">
           <div class="footer-unified__brand">
             <a class="brand footer-brand" href="./" aria-label="Leinaro Startseite"
-              ><span class="brand-mark"></span>Leinaro</a>
+              ><span class="brand-mark"></span>Leinaro</a
+            >
             <p class="muted">WEBDESIGN &middot; SEO &middot; HOSTING</p>
             <nav class="footer-social" aria-label="Social Media">
               <!-- Profil-URLs ergänzen, sobald Instagram und Facebook verfügbar sind. -->
-              <a class="footer-social__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram öffnen (neuer Tab)">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+              <a
+                class="footer-social__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram öffnen (neuer Tab)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <rect x="3" y="3" width="18" height="18" rx="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
                 <span>Instagram</span>
               </a>
-              <a class="footer-social__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook öffnen (neuer Tab)">
+              <a
+                class="footer-social__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook öffnen (neuer Tab)"
+              >
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                  <path d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z" />
+                  <path
+                    d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z"
+                  />
                 </svg>
                 <span>Facebook</span>
               </a>
@@ -147,7 +197,9 @@
         </div>
         <div class="footer-bottom">
           <span>© 2026 Leinaro</span>
-          <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+          <div>
+            <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+          </div>
         </div>
       </div>
     </footer>

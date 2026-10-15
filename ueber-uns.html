@@ -9,6 +9,7 @@
     />
     <link rel="canonical" href="https://leinaro.at/ueber-uns.html" />
     <link rel="icon" href="images/leinaro-logo.svg" type="image/svg+xml" />
+    <link rel="preload" href="fonts/poppins-600.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <title>Christoph Leitner – Webdesign aus Krieglach | Leinaro</title>
@@ -19,24 +20,34 @@
       <nav class="nav container" aria-label="Hauptnavigation">
         <a class="brand" href="./" aria-label="Leinaro Startseite"
           ><span class="brand-mark"></span>Leinaro</a
-        ><button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false">
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+        >
           <span></span><span></span><span></span>
         </button>
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-menu">
           <li><a href="./">Start</a></li>
-          <li><a class="active" href="ueber-uns.html">Über mich</a></li>
+          <li><a class="active" aria-current="page" href="ueber-uns.html">Über mich</a></li>
           <li class="has-submenu">
             <button type="button">Leistungen</button>
             <ul class="submenu">
+              <li><a href="leistungen.html">Alle Leistungen</a></li>
               <li><a href="webdesign.html">Webdesign</a></li>
               <li><a href="seo.html">SEO &amp; Sichtbarkeit</a></li>
-              <li><a href="domain-hosting.html">Domain & Hosting</a></li>
+              <li><a href="domain-hosting.html">Domain &amp; Hosting</a></li>
               <li><a href="betreuung.html">Betreuung</a></li>
             </ul>
           </li>
           <li><a href="referenzen.html">Projekte</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a class="nav-cta" href="kontakt.html">Projekt anfragen</a></li>
+          <li>
+            <a class="nav-cta" href="kontakt.html">Projekt anfragen <span>→</span></a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -44,7 +55,10 @@
       <section class="page-hero">
         <div class="container reveal">
           <p class="eyebrow">Über Leinaro</p>
-          <h1>Technik mit persönlichem <span class="lime">Ansprechpartner.</span></h1>
+          <h1 class="display-pair">
+            <span class="outline-text">Technik mit persönlichem</span>
+            <span class="lime">Ansprech<wbr />partner.</span>
+          </h1>
         </div>
       </section>
       <section class="section section-surface section-surface--white">
@@ -76,9 +90,7 @@
                 <div>
                   <h3>Technisches Verständnis.</h3>
                   <p>
-                    Durch meine Erfahrung in IT, Elektrotechnik und Automatisierung verbinde ich
-                    technisches Verständnis mit einem klaren Blick für das, was für Ihre Kunden
-                    zählt.
+                    Erfahrung in IT, Elektrotechnik und Automatisierung – mit Blick auf Ihre Kunden.
                   </p>
                 </div>
               </div>
@@ -87,10 +99,8 @@
                 <div>
                   <h3>Ehrliche Begleitung.</h3>
                   <p>
-                    Mir ist wichtig, dass Sie sich bei Ihrem Webprojekt gut begleitet fühlen –
-                    unabhängig davon, wie vertraut Sie mit digitalen Themen sind. Deshalb gibt es
-                    bei mir keinen unnötigen Jargon, sondern ehrliche Empfehlungen und
-                    nachvollziehbare Entscheidungen.
+                    Ehrliche Empfehlungen und verständliche Entscheidungen – auch ohne technisches
+                    Vorwissen.
                   </p>
                 </div>
               </div>
@@ -99,8 +109,8 @@
                 <div>
                   <h3>Ein Auftritt, der zu Ihnen passt.</h3>
                   <p>
-                    Ihr Auftritt soll zu Ihnen passen, zuverlässig funktionieren und Sie langfristig
-                    unterstützen. Genau daran arbeite ich persönlich mit Ihnen.
+                    Gemeinsam entwickeln wir einen Auftritt, der zu Ihnen passt und zuverlässig
+                    funktioniert.
                   </p>
                 </div>
               </div>
@@ -116,32 +126,26 @@
           <div class="section__head reveal">
             <div>
               <p class="eyebrow">Wofür ich stehe</p>
-              <h2>Die Zusammenarbeit soll <span class="editorial-mark">einfach sein.</span></h2>
+              <h2 class="display-pair">
+                <span class="outline-text">Die Zusammenarbeit soll</span>
+                <span class="editorial-mark">einfach sein.</span>
+              </h2>
             </div>
-            <p>
-              Ein professioneller Webauftritt entsteht nicht im luftleeren Raum. Er entsteht im
-              offenen Austausch und mit einem klaren Anspruch an das Ergebnis.
-            </p>
+            <p>Im direkten Austausch entsteht ein Auftritt, hinter dem Sie stehen.</p>
           </div>
           <ul class="feature-list reveal">
             <li>
               <span>01</span>
               <div>
                 <h3>Auf Augenhöhe</h3>
-                <p>
-                  Sie müssen nicht wissen, wie eine Website technisch funktioniert. Ich nehme mir
-                  Zeit, erkläre verständlich und finde eine Lösung, die wirklich zu Ihnen passt.
-                </p>
+                <p>Ich höre zu, erkläre verständlich und nehme mir Zeit für Ihre Fragen.</p>
               </div>
             </li>
             <li>
               <span>02</span>
               <div>
                 <h3>Mit Blick fürs Detail</h3>
-                <p>
-                  Eine gute Website besteht aus vielen kleinen, sauber abgestimmten Entscheidungen:
-                  Gestaltung, Inhalte, Bedienung, Geschwindigkeit und Sichtbarkeit.
-                </p>
+                <p>Gestaltung, Bedienung und Technik werden sorgfältig aufeinander abgestimmt.</p>
               </div>
             </li>
             <li>

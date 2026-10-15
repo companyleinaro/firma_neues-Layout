@@ -7,9 +7,10 @@
       name="description"
       content="Webdesign, persönliche Website-Betreuung, Domain und Hosting sowie SEO von Leinaro in Krieglach und der Steiermark."
     />
-    <meta name="theme-color" content="#fbf9f3" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href="https://leinaro.at/leistungen.html" />
     <link rel="icon" href="images/leinaro-logo.svg" type="image/svg+xml" />
+    <link rel="preload" href="fonts/poppins-600.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <title>Webdesign, SEO, Hosting &amp; Betreuung | Leinaro</title>
@@ -33,9 +34,12 @@
         <ul class="nav-links" id="primary-menu">
           <li><a href="./">Start</a></li>
           <li><a href="ueber-uns.html">Über mich</a></li>
-          <li class="has-submenu is-current-section">
-            <button class="active" type="button" aria-expanded="false">Leistungen</button>
+          <li class="has-submenu">
+            <button class="active" type="button">Leistungen</button>
             <ul class="submenu">
+              <li>
+                <a class="active" aria-current="page" href="leistungen.html">Alle Leistungen</a>
+              </li>
               <li><a href="webdesign.html">Webdesign</a></li>
               <li><a href="seo.html">SEO &amp; Sichtbarkeit</a></li>
               <li><a href="domain-hosting.html">Domain &amp; Hosting</a></li>
@@ -55,7 +59,10 @@
       <section class="page-hero">
         <div class="container reveal">
           <p class="eyebrow">Leistungen</p>
-          <h1>Was Ihr digitaler Auftritt <span class="lime">braucht.</span></h1>
+          <h1 class="display-pair">
+            <span class="outline-text">Was Ihr digitaler Auftritt</span>
+            <span class="lime">braucht.</span>
+          </h1>
         </div>
       </section>
 
@@ -64,9 +71,7 @@
           <div class="services-overview__head reveal">
             <p class="section-label">Ein klarer Rahmen für Ihr Projekt</p>
             <p>
-              Keine unübersichtlichen Pakete und kein Fachchinesisch: Sie entscheiden, was Sie
-              brauchen. Ich sorge dafür, dass Gestaltung, Inhalt und Technik eine gute Einheit
-              bilden.
+              Webdesign, SEO, Hosting und Betreuung: Gemeinsam finden wir, was Ihr Auftritt braucht.
             </p>
           </div>
 
@@ -83,11 +88,11 @@
             >
             <div class="service-editorial__copy">
               <p class="section-label">Webdesign</p>
-              <h2>Eine Website, die sich <span class="editorial-mark">nach Ihnen</span> anfühlt.</h2>
+              <h2>
+                Eine Website, die sich <span class="editorial-mark">nach Ihnen</span> anfühlt.
+              </h2>
               <p>
-                Ihr Angebot verdient mehr als eine Vorlage. Gemeinsam entwickeln wir einen digitalen
-                Auftritt, der Orientierung schafft, Charakter zeigt und den nächsten Schritt leicht
-                macht.
+                Individuelles Webdesign, das Ihr Angebot klar zeigt und den Kontakt leicht macht.
               </p>
               <ul class="service-editorial__list">
                 <li>Individuelles Design und klare Seitenstruktur</li>
@@ -99,14 +104,30 @@
           </article>
 
           <article class="service-editorial service-editorial--reverse reveal">
-            <a class="service-editorial__image" href="seo.html"><img src="images/seo-visibility.png"
-              width="1536" height="1024" alt="SEO-Motiv mit Suchoberfläche und Analysekurve"
-              loading="lazy" decoding="async" /><span>02</span></a>
+            <a class="service-editorial__image" href="seo.html"
+              ><img
+                src="images/seo-visibility.png"
+                width="1536"
+                height="1024"
+                alt="SEO-Motiv mit Suchoberfläche und Analysekurve"
+                loading="lazy"
+                decoding="async"
+              /><span>02</span></a
+            >
             <div class="service-editorial__copy">
               <p class="section-label">SEO &amp; Sichtbarkeit</p>
-              <h2>Von den richtigen Menschen <span class="editorial-mark">gefunden werden.</span></h2>
-              <p>Eine überzeugende Website ist der Anfang. Mit passenden Inhalten, einer klaren technischen Basis und lokalem Bezug unterstütze ich Sie dabei, Ihr Angebot besser auffindbar zu machen.</p>
-              <ul class="service-editorial__list"><li>Analyse, Suchbegriffe und gezielte Inhaltsoptimierung</li><li>Technische SEO und verständliche Seitenstruktur</li><li>Local SEO und Begleitung bei der Auswertung</li></ul>
+              <h2>
+                Von den richtigen Menschen <span class="editorial-mark">gefunden werden.</span>
+              </h2>
+              <p>
+                Passende Inhalte, saubere Technik und Local SEO machen Ihr Angebot besser
+                auffindbar.
+              </p>
+              <ul class="service-editorial__list">
+                <li>Analyse, Suchbegriffe und gezielte Inhaltsoptimierung</li>
+                <li>Technische SEO und verständliche Seitenstruktur</li>
+                <li>Local SEO und Begleitung bei der Auswertung</li>
+              </ul>
               <a class="text-arrow" href="seo.html">SEO entdecken <span>→</span></a>
             </div>
           </article>
@@ -126,8 +147,8 @@
               <p class="section-label">Domain &amp; Hosting</p>
               <h2>Die Technik darf sich <span class="editorial-mark">leicht</span> anfühlen.</h2>
               <p>
-                Domain, Hosting und der sichere Onlinegang sind die Basis Ihres digitalen Auftritts.
-                Ich unterstütze Sie dabei verständlich, vorausschauend und ohne unnötige Umwege.
+                Ihre Webadresse, das passende Hosting und ein sicherer Start – persönlich
+                organisiert.
               </p>
               <ul class="service-editorial__list">
                 <li>Domain und Hosting sinnvoll organisiert</li>
@@ -153,8 +174,7 @@
               <p class="section-label">Betreuung</p>
               <h2>Ein Auftritt, der mit Ihnen <span class="editorial-mark">Schritt hält.</span></h2>
               <p>
-                Nach dem Onlinegang müssen Sie nicht allein weitermachen. Auf Wunsch bleibe ich für
-                Änderungen, Updates, Backups und Fragen an Ihrer Seite – verlässlich und persönlich.
+                Updates, Backups und Änderungen: Ich bleibe auch nach dem Onlinegang für Sie da.
               </p>
               <ul class="service-editorial__list">
                 <li>Aktualisierungen und kleine Weiterentwicklungen</li>
@@ -175,7 +195,14 @@
           </div>
           <a class="button button--primary" href="kontakt.html">Unverbindlich anfragen</a>
           <figure class="cta-panel__visual">
-            <img src="images/creative-workbench.png" width="1672" height="941" loading="lazy" decoding="async" alt="Kreativer Arbeitsplatz mit Designmaterialien" />
+            <img
+              src="images/creative-workbench.png"
+              width="1672"
+              height="941"
+              loading="lazy"
+              decoding="async"
+              alt="Kreativer Arbeitsplatz mit Designmaterialien"
+            />
             <figcaption>Für Ihren nächsten Schritt.</figcaption>
           </figure>
         </div>
@@ -187,21 +214,43 @@
         <div class="footer-unified__top">
           <div class="footer-unified__brand">
             <a class="brand footer-brand" href="./" aria-label="Leinaro Startseite"
-              ><span class="brand-mark"></span>Leinaro</a>
+              ><span class="brand-mark"></span>Leinaro</a
+            >
             <p class="muted">WEBDESIGN &middot; SEO &middot; HOSTING</p>
             <nav class="footer-social" aria-label="Social Media">
               <!-- Profil-URLs ergänzen, sobald Instagram und Facebook verfügbar sind. -->
-              <a class="footer-social__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram öffnen (neuer Tab)">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+              <a
+                class="footer-social__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram öffnen (neuer Tab)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <rect x="3" y="3" width="18" height="18" rx="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
                 <span>Instagram</span>
               </a>
-              <a class="footer-social__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook öffnen (neuer Tab)">
+              <a
+                class="footer-social__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook öffnen (neuer Tab)"
+              >
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                  <path d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z" />
+                  <path
+                    d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z"
+                  />
                 </svg>
                 <span>Facebook</span>
               </a>
@@ -230,7 +279,9 @@
         </div>
         <div class="footer-bottom">
           <span>© 2026 Leinaro</span>
-          <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+          <div>
+            <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+          </div>
         </div>
       </div>
     </footer>

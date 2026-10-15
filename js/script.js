@@ -1,7 +1,6 @@
 document.documentElement.classList.add('js');
 
 document.addEventListener('DOMContentLoaded', () => {
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const header = document.querySelector('.site-header');
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
@@ -20,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeMenu = () => {
     navLinks?.classList.remove('is-open');
     menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', 'Menü öffnen');
     document.body.classList.remove('menu-open');
   };
 
@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateHeader = () => {
     const scrollY = Math.max(0, window.scrollY);
     header?.classList.toggle('is-scrolled', scrollY > 12);
-    const navigationInUse = navLinks?.classList.contains('is-open') ||
+    const navigationInUse =
+      navLinks?.classList.contains('is-open') ||
       header?.querySelector(':focus-visible, .has-submenu.open');
     if (scrollY < previousScrollY || scrollY <= (header?.offsetHeight || 82) || navigationInUse) {
       header?.classList.remove('is-hidden');
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   menuToggle?.addEventListener('click', () => {
     const isOpen = navLinks?.classList.toggle('is-open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
     document.body.classList.toggle('menu-open', isOpen);
     header?.classList.remove('is-hidden');
   });
@@ -75,6 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document
     .querySelectorAll('.nav-links a')
     .forEach((link) => link.addEventListener('click', closeMenu));
+  window.matchMedia('(min-width: 851px)').addEventListener('change', (event) => {
+    if (event.matches) closeMenu();
+  });
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       closeMenu();
@@ -85,88 +90,120 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const revealElements = document.querySelectorAll('.reveal');
-  if (!reducedMotion && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      (entries, currentObserver) => {
+  // Mobile reading rhythm: native disclosures, fully expanded without JavaScript.
+  // Reuse the same content and restore the original DOM on larger screens.
+  const readingViewport = window.matchMedia('(max-width: 600px)');
+  const readingCards = [
+    ...document.querySelectorAll('.offer-card, .process-step, .process-premium__rail > li')
+  ];
+  const readingStates = new Map();
+  const updateReadingCards = () => {
+    readingCards.forEach((card) => {
+      if (readingViewport.matches && !readingStates.has(card)) {
+        const heading = card.querySelector(':scope > h3');
+        const paragraphs = [...card.querySelectorAll(':scope > p')];
+        if (!heading || !paragraphs.length) return;
+        const originalNodes = [...card.childNodes];
+        const disclosure = document.createElement('details');
+        disclosure.className = 'mobile-disclosure';
+        const summary = document.createElement('summary');
+        const content = document.createElement('div');
+        content.className = 'mobile-disclosure__content';
+        card.insertBefore(disclosure, heading);
+        summary.append(heading);
+        content.append(...paragraphs);
+        disclosure.append(summary, content);
+        card.classList.add('has-mobile-disclosure');
+        readingStates.set(card, originalNodes);
+      } else if (!readingViewport.matches && readingStates.has(card)) {
+        card.replaceChildren(...readingStates.get(card));
+        card.classList.remove('has-mobile-disclosure');
+        readingStates.delete(card);
+      }
+    });
+  };
+  updateReadingCards();
+  readingViewport.addEventListener('change', updateReadingCards);
+
+  // Inhalte bleiben ohne JavaScript und bei reduzierter Bewegung sofort sichtbar.
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const entryTargets = [
+    ...new Set([
+      ...document.querySelectorAll('.reveal'),
+      ...document.querySelectorAll('.process-premium__rail > li, .process-step')
+    ])
+  ];
+  const motionSteps = [...document.querySelectorAll('.process-premium__rail > li, .process-step')];
+  motionSteps.forEach((step, index) => {
+    step.classList.add('motion-step');
+    step.style.setProperty('--enter-delay', `${(index % 5) * 0.075}s`);
+  });
+  if (!motionPreference.matches && 'IntersectionObserver' in window) {
+    const entryObserver = new IntersectionObserver(
+      (entries, observer) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            currentObserver.unobserve(entry.target);
-          }
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-in-view');
+          observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.08, rootMargin: '0px 0px -24px 0px' }
     );
-    revealElements.forEach((element) => observer.observe(element));
+    entryTargets.forEach((element) => {
+      element.classList.add('motion-enter');
+      entryObserver.observe(element);
+    });
+    document.body.classList.add('motion-enhanced');
   } else {
-    revealElements.forEach((element) => element.classList.add('visible'));
+    entryTargets.forEach((element) => element.classList.add('is-in-view'));
   }
-
-  const slider = document.querySelector('[data-hero-slider]');
-  if (slider) {
-    const slides = [...slider.querySelectorAll('[data-slide]')];
-    const buttons = [...slider.querySelectorAll('[data-slide-control]')];
-    let activeIndex = 0;
-    let timer;
-    const slideDuration = 3000;
-    const showSlide = (nextIndex) => {
-      activeIndex = (nextIndex + slides.length) % slides.length;
-      slides.forEach((slide, index) => slide.classList.toggle('is-active', index === activeIndex));
-      buttons.forEach((button, index) => {
-        const current = index === activeIndex;
-        button.classList.toggle('is-active', current);
-        button.setAttribute('aria-current', String(current));
-      });
+  const heroSection = document.querySelector('.hero-showcase');
+  if (heroSection && 'IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      entries.forEach((entry) =>
+        entry.target.classList.toggle('is-motion-visible', entry.isIntersecting)
+      );
+    }).observe(heroSection);
+  }
+  const magneticButtons = [...document.querySelectorAll('.button, .nav-cta')];
+  const resetMagnetics = () =>
+    magneticButtons.forEach((button) => {
+      button.style.removeProperty('--magnet-x');
+      button.style.removeProperty('--magnet-y');
+    });
+  const updateMotionPreference = () => {
+    document.body.classList.toggle('motion-reduced', motionPreference.matches);
+    if (motionPreference.matches) {
+      resetMagnetics();
+      entryTargets.forEach((element) => element.classList.add('is-in-view'));
+    }
+  };
+  updateMotionPreference();
+  motionPreference.addEventListener('change', updateMotionPreference);
+  magneticButtons.forEach((button) => {
+    let bounds;
+    button.addEventListener('pointerenter', () => {
+      bounds = button.getBoundingClientRect();
+    });
+    button.addEventListener('pointermove', (event) => {
+      if (event.pointerType !== 'mouse' || motionPreference.matches) return;
+      bounds ||= button.getBoundingClientRect();
+      const x = Math.max(-6, Math.min(6, (event.clientX - bounds.left - bounds.width / 2) * 0.07));
+      const y = Math.max(-4, Math.min(4, (event.clientY - bounds.top - bounds.height / 2) * 0.1));
+      button.style.setProperty('--magnet-x', `${x.toFixed(2)}px`);
+      button.style.setProperty('--magnet-y', `${y.toFixed(2)}px`);
+    });
+    const resetButton = () => {
+      bounds = null;
+      button.style.removeProperty('--magnet-x');
+      button.style.removeProperty('--magnet-y');
     };
-    const startTimer = () => {
-      window.clearInterval(timer);
-      if (!reducedMotion && slides.length > 1 && !document.hidden) {
-        timer = window.setInterval(() => showSlide(activeIndex + 1), slideDuration);
-      }
-    };
-    buttons.forEach((button, index) =>
-      button.addEventListener('click', () => {
-        window.clearInterval(timer);
-        showSlide(index);
-        startTimer();
-      })
-    );
-    document.addEventListener('visibilitychange', startTimer);
-    startTimer();
-  }
+    button.addEventListener('pointerleave', resetButton);
+    button.addEventListener('focus', resetButton);
+  });
 
-  if (!reducedMotion && window.matchMedia('(hover: hover)').matches) {
-    document.querySelectorAll('[data-tilt]').forEach((card) => {
-      card.addEventListener('pointermove', (event) => {
-        const rect = card.getBoundingClientRect();
-        const x = (event.clientX - rect.left) / rect.width - 0.5;
-        const y = (event.clientY - rect.top) / rect.height - 0.5;
-        card.style.setProperty('--tilt-x', `${y * -4}deg`);
-        card.style.setProperty('--tilt-y', `${x * 5}deg`);
-      });
-      card.addEventListener('pointerleave', () => {
-        card.style.removeProperty('--tilt-x');
-        card.style.removeProperty('--tilt-y');
-      });
-    });
-  }
-
-  document.querySelectorAll('[data-project-reveal]').forEach((card) => {
-    card.addEventListener('pointerup', (event) => {
-      if (event.pointerType === 'mouse') return;
-      if (event.target.closest('a')) return;
-      card.classList.toggle('is-active');
-    });
-    card.addEventListener('pointerleave', (event) => {
-      if (event.pointerType === 'mouse') card.classList.remove('is-active');
-    });
-    card.addEventListener('focusout', (event) => {
-      if (!card.contains(event.relatedTarget)) card.classList.remove('is-active');
-    });
-    card.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') card.classList.remove('is-active');
-    });
+  document.addEventListener('visibilitychange', () => {
+    document.body.classList.toggle('motion-idle', document.hidden);
   });
 
   let consent = document.querySelector('.cookie-banner');
@@ -209,7 +246,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   if (consent) {
     // Legal information must remain directly readable from the dialog's link.
-    if (['datenschutz.html', 'impressum.html'].includes(pageName) || safelyGetConsent()) dismissConsent();
+    if (['datenschutz.html', 'impressum.html'].includes(pageName) || safelyGetConsent())
+      dismissConsent();
     else showConsent();
   }
   consent?.querySelectorAll('[data-cookie-choice]').forEach((button) => {
