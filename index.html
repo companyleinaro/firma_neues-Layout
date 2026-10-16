@@ -14,11 +14,10 @@
       content="Webdesign, Hosting, SEO und persönliche Betreuung aus der Steiermark."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://leinaro.at/images/hero-character.jpg" />
+    <meta property="og:image" content="https://leinaro.at/images/optimized/startseite-hero-farben-1200.webp" />
     <link rel="canonical" href="https://leinaro.at/" />
     <link rel="icon" href="images/leinaro-logo.svg" type="image/svg+xml" />
     <link rel="preload" href="fonts/poppins-600.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="images/hero-character.jpg" as="image" fetchpriority="high" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <script type="application/ld+json">
@@ -28,7 +27,7 @@
         "name": "Leinaro",
         "logo": "https://leinaro.at/images/leinaro-logo.svg",
         "url": "https://leinaro.at/",
-        "image": "https://leinaro.at/images/hero-character.jpg",
+        "image": "https://leinaro.at/images/optimized/startseite-hero-farben-1200.webp",
         "telephone": "+436603972228",
         "email": "office@leinaro.at",
         "address": {
@@ -43,7 +42,7 @@
     </script>
     <title>Webdesign in Krieglach &amp; der Steiermark | Leinaro</title>
   </head>
-  <body>
+  <body class="home-images--updated">
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
     <header class="site-header site-header--hero">
       <nav class="nav container" aria-label="Hauptnavigation">
@@ -65,7 +64,6 @@
           <li class="has-submenu">
             <button type="button">Leistungen</button>
             <ul class="submenu">
-              <li><a href="leistungen.html">Alle Leistungen</a></li>
               <li><a href="webdesign.html">Webdesign</a></li>
               <li><a href="seo.html">SEO &amp; Sichtbarkeit</a></li>
               <li><a href="domain-hosting.html">Domain &amp; Hosting</a></li>
@@ -100,14 +98,15 @@
       <section class="hero-showcase hero-showcase--image" aria-labelledby="hero-title">
         <img
           class="hero-showcase__background"
-          src="images/hero-character.jpg"
-          width="1920"
-          height="1076"
+          src="images/optimized/startseite-hero-farben-1200.webp"
+                  srcset="images/optimized/startseite-hero-farben-480.webp 480w, images/optimized/startseite-hero-farben-800.webp 800w, images/optimized/startseite-hero-farben-1200.webp 1200w, images/optimized/startseite-hero-farben-1672.webp 1672w"
+                  sizes="(max-width: 600px) 1600px, 100vw"
+          width="1672"
+          height="941"
           alt=""
           aria-hidden="true"
           fetchpriority="high"
-          decoding="async"
-        />
+          decoding="async" />
         <div class="container hero-showcase__inner">
           <div class="hero-showcase__copy">
             <h1 id="hero-title">
@@ -167,17 +166,12 @@
             <p class="section-label">Nicht einfach nur online</p>
             <figure>
               <img
-                src="images/optimized/intro-first-impression-1200.webp"
-                srcset="
-                  images/optimized/intro-first-impression-480.webp   480w,
-                  images/optimized/intro-first-impression-800.webp   800w,
-                  images/optimized/intro-first-impression-1200.webp 1200w,
-                  images/optimized/intro-first-impression-1536.webp 1536w
-                "
-                sizes="(max-width: 850px) calc(100vw - 3rem), 600px"
-                width="1536"
-                height="1024"
-                alt="Kreativer Arbeitsplatz mit Website-Entwurf, Bildideen und Blick auf die Berglandschaft"
+                src="images/optimized/startseite-erster-eindruck-1200.webp"
+                  srcset="images/optimized/startseite-erster-eindruck-480.webp 480w, images/optimized/startseite-erster-eindruck-800.webp 800w, images/optimized/startseite-erster-eindruck-1200.webp 1200w, images/optimized/startseite-erster-eindruck-1448.webp 1448w"
+                  sizes="(max-width: 850px) calc(100vw - 3rem), 600px"
+                width="1448"
+                height="1086"
+                alt="Design-Moodboard mit Website-Entwürfen, Smartphone und kräftigen Farbakzenten"
                 loading="lazy"
                 decoding="async"
               />
@@ -303,26 +297,9 @@
       <section class="image-narrative section section-surface section-surface--cream">
         <div class="container image-narrative__grid">
           <div class="image-narrative__image reveal">
-            <div class="image-placeholder image-placeholder--portrait">
-              <svg
-                class="image-placeholder__icon"
-                viewBox="0 0 40 32"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.2"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <rect x="1" y="1" width="38" height="30" />
-                <circle cx="29" cy="9" r="3" />
-                <path d="M2 25L13 14L23 24L29 18L39 28" /></svg
-              ><span class="image-placeholder__label">Bildplatzhalter</span
-              ><strong>Ein Einblick in meine Arbeit.</strong>
-              <p>
-                Hier kommt ein eigenes Foto vom Arbeitsplatz oder von der Arbeit an einem Webprojekt
-                hin.
-              </p>
-            </div>
+            <img src="images/optimized/startseite-digitales-handwerk-1200.webp"
+                  srcset="images/optimized/startseite-digitales-handwerk-480.webp 480w, images/optimized/startseite-digitales-handwerk-800.webp 800w, images/optimized/startseite-digitales-handwerk-1200.webp 1200w, images/optimized/startseite-digitales-handwerk-1448.webp 1448w"
+                  sizes="(max-width: 850px) calc(100vw - 2.5rem), 560px" width="1448" height="1086" loading="lazy" decoding="async" alt="Illustrativer Arbeitsplatz mit Laptop, Website-Entwurf, Skizzen und Farbmustern" />
             <p>Leinaro<br /><span>Aus Krieglach. Für Ihren nächsten Schritt.</span></p>
           </div>
           <div class="image-narrative__copy reveal delay-1">
@@ -349,17 +326,12 @@
             <a class="cinema-card cinema-card--design reveal" href="webdesign.html"
               ><span class="cinema-card__media"
                 ><img
-                  src="images/optimized/webdesign-devices-1200.webp"
-                  srcset="
-                    images/optimized/webdesign-devices-480.webp   480w,
-                    images/optimized/webdesign-devices-800.webp   800w,
-                    images/optimized/webdesign-devices-1200.webp 1200w,
-                    images/optimized/webdesign-devices-1536.webp 1536w
-                  "
+                  src="images/optimized/startseite-webdesign-1200.webp"
+                  srcset="images/optimized/startseite-webdesign-480.webp 480w, images/optimized/startseite-webdesign-800.webp 800w, images/optimized/startseite-webdesign-1200.webp 1200w, images/optimized/startseite-webdesign-1448.webp 1448w"
                   sizes="(max-width: 850px) calc(100vw - 3rem), 600px"
-                  width="1536"
-                  height="1024"
-                  alt="Moderne Website-Layouts auf verschiedenen Geräten"
+                  width="1448"
+                  height="1086"
+                  alt="Illustrativer Webauftritt auf Monitor, Tablet und Smartphone mit pinken und gelbgrünen Akzenten"
                   loading="lazy"
                   decoding="async" /></span
               ><span class="cinema-card__index">01</span>
@@ -384,17 +356,12 @@
             <a class="cinema-card cinema-card--seo reveal delay-1" href="seo.html">
               <span class="cinema-card__media"
                 ><img
-                  src="images/optimized/seo-visibility-1200.webp"
-                  srcset="
-                    images/optimized/seo-visibility-480.webp   480w,
-                    images/optimized/seo-visibility-800.webp   800w,
-                    images/optimized/seo-visibility-1200.webp 1200w,
-                    images/optimized/seo-visibility-1536.webp 1536w
-                  "
+                  src="images/optimized/startseite-seo-1200.webp"
+                  srcset="images/optimized/startseite-seo-480.webp 480w, images/optimized/startseite-seo-800.webp 800w, images/optimized/startseite-seo-1200.webp 1200w, images/optimized/startseite-seo-1536.webp 1536w"
                   sizes="(max-width: 850px) calc(100vw - 3rem), 600px"
                   width="1536"
                   height="1024"
-                  alt="Suchmaschinenoptimierung mit Suchoberfläche, Analysekurve und blauer Glaslupe"
+                  alt="Illustration zu Local SEO mit Lupe, regionalen Unternehmen und Standortmarkierungen"
                   loading="lazy"
                   decoding="async"
               /></span>
@@ -421,17 +388,12 @@
             <a class="cinema-card cinema-card--hosting reveal" href="domain-hosting.html"
               ><span class="cinema-card__media"
                 ><img
-                  src="images/optimized/hosting-detail-landscape-1200.webp"
-                  srcset="
-                    images/optimized/hosting-detail-landscape-480.webp   480w,
-                    images/optimized/hosting-detail-landscape-800.webp   800w,
-                    images/optimized/hosting-detail-landscape-1200.webp 1200w,
-                    images/optimized/hosting-detail-landscape-1536.webp 1536w
-                  "
+                  src="images/optimized/startseite-domain-hosting-1200.webp"
+                  srcset="images/optimized/startseite-domain-hosting-480.webp 480w, images/optimized/startseite-domain-hosting-800.webp 800w, images/optimized/startseite-domain-hosting-1200.webp 1200w, images/optimized/startseite-domain-hosting-1536.webp 1536w"
                   sizes="(max-width: 850px) calc(100vw - 3rem), 600px"
                   width="1536"
                   height="1024"
-                  alt="Sorgfältig organisierte technische Infrastruktur"
+                  alt="Illustration vernetzter Domain-, Server-, Backup- und Sicherheitskomponenten"
                   loading="lazy"
                   decoding="async" /></span
               ><span class="cinema-card__index">03</span>
@@ -456,17 +418,12 @@
             <a class="cinema-card cinema-card--care reveal delay-1" href="betreuung.html"
               ><span class="cinema-card__media"
                 ><img
-                  src="images/optimized/collaboration-studio-landscape-1200.webp"
-                  srcset="
-                    images/optimized/collaboration-studio-landscape-480.webp   480w,
-                    images/optimized/collaboration-studio-landscape-800.webp   800w,
-                    images/optimized/collaboration-studio-landscape-1200.webp 1200w,
-                    images/optimized/collaboration-studio-landscape-1536.webp 1536w
-                  "
+                  src="images/optimized/startseite-support-1200.webp"
+                  srcset="images/optimized/startseite-support-480.webp 480w, images/optimized/startseite-support-800.webp 800w, images/optimized/startseite-support-1200.webp 1200w, images/optimized/startseite-support-1448.webp 1448w"
                   sizes="(max-width: 850px) calc(100vw - 3rem), 600px"
-                  width="1536"
-                  height="1024"
-                  alt="Gemeinsame Arbeit an einem Website-Konzept"
+                  width="1448"
+                  height="1086"
+                  alt="Illustration zur Website-Betreuung mit Smartphone, Support, Updates und Sicherheit"
                   loading="lazy"
                   decoding="async" /></span
               ><span class="cinema-card__index">04</span>
@@ -521,13 +478,8 @@
             <a class="mosaic-tile mosaic-tile--main reveal" href="hairdesign-barbara-leitner.html"
               ><img
                 src="images/optimized/hairdesign-laptop-mockup-1200.webp"
-                srcset="
-                  images/optimized/hairdesign-laptop-mockup-480.webp   480w,
-                  images/optimized/hairdesign-laptop-mockup-800.webp   800w,
-                  images/optimized/hairdesign-laptop-mockup-1200.webp 1200w,
-                  images/optimized/hairdesign-laptop-mockup-1536.webp 1536w
-                "
-                sizes="(max-width: 850px) calc(100vw - 3rem), 760px"
+                  srcset="images/optimized/hairdesign-laptop-mockup-480.webp 480w, images/optimized/hairdesign-laptop-mockup-800.webp 800w, images/optimized/hairdesign-laptop-mockup-1200.webp 1200w, images/optimized/hairdesign-laptop-mockup-1536.webp 1536w"
+                  sizes="(max-width: 850px) calc(100vw - 3rem), 760px"
                 width="1536"
                 height="1024"
                 alt="Website von Hairdesign Barbara Leitner auf einem Laptop im Salon"
@@ -611,18 +563,13 @@
           <div class="process-premium__personal reveal">
             <figure>
               <img
-                src="images/optimized/personal-consultation-1200.webp"
-                srcset="
-                  images/optimized/personal-consultation-480.webp   480w,
-                  images/optimized/personal-consultation-800.webp   800w,
-                  images/optimized/personal-consultation-1200.webp 1200w,
-                  images/optimized/personal-consultation-1672.webp 1672w
-                "
-                sizes="(max-width: 850px) calc(100vw - 3rem), 700px"
-                width="1672"
-                height="941"
+                src="images/optimized/startseite-zusammenarbeit-1200.webp"
+                  srcset="images/optimized/startseite-zusammenarbeit-480.webp 480w, images/optimized/startseite-zusammenarbeit-800.webp 800w, images/optimized/startseite-zusammenarbeit-1200.webp 1200w, images/optimized/startseite-zusammenarbeit-1448.webp 1448w"
+                  sizes="(max-width: 850px) calc(100vw - 3rem), 700px"
+                width="1448"
+                height="1086"
                 loading="lazy"
-                alt="Illustrative Szene eines persönlichen Beratungsgesprächs zu einem Webprojekt"
+                alt="Illustrativer Weg von der Website-Skizze über das Design bis zur Umsetzung auf einem Laptop"
                 decoding="async"
               />
               <figcaption>Persönlich besprochen. Verständlich entschieden.</figcaption>
@@ -741,17 +688,12 @@
       <section class="closing-stage section-surface section-surface--cream">
         <div class="closing-stage__image">
           <img
-            src="images/optimized/hero-digital-studio-1200.webp"
-            srcset="
-              images/optimized/hero-digital-studio-480.webp   480w,
-              images/optimized/hero-digital-studio-800.webp   800w,
-              images/optimized/hero-digital-studio-1200.webp 1200w,
-              images/optimized/hero-digital-studio-1672.webp 1672w
-            "
-            sizes="100vw"
+            src="images/optimized/startseite-naechster-schritt-1200.webp"
+                  srcset="images/optimized/startseite-naechster-schritt-480.webp 480w, images/optimized/startseite-naechster-schritt-800.webp 800w, images/optimized/startseite-naechster-schritt-1200.webp 1200w, images/optimized/startseite-naechster-schritt-1672.webp 1672w"
+                  sizes="100vw"
             width="1672"
             height="941"
-            alt="Laptop mit abstrahiertem digitalen Design im Studio"
+            alt="Illustration der fünf Projektschritte vom Kennenlernen bis zum Livegang und zur Betreuung"
             loading="lazy"
             decoding="async"
           />

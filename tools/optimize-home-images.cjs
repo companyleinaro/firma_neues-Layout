@@ -26,17 +26,12 @@ async function main() {
       await sharp(original).resize({ width, withoutEnlargement: true }).webp({ quality: 82, effort: 6 }).toFile(path.join(root, relative));
       variants.push({ width, relative, bytes: fs.statSync(path.join(root, relative)).size });
     }
-    let sizes = '(max-width: 850px) calc(100vw - 3rem), 600px';
-    if (name === 'hero-holzwerk-concept') sizes = '(max-width: 560px) calc(100vw - 5rem), 560px';
-    if (name === 'studio-workspace') sizes = '(max-width: 560px) calc(100vw - 3rem), 500px';
-    if (name === 'hairdesign-laptop-mockup') sizes = '(max-width: 850px) calc(100vw - 3rem), 760px';
-    if (name === 'personal-consultation') sizes = '(max-width: 850px) calc(100vw - 3rem), 700px';
-    if (name === 'hero-digital-studio') sizes = '100vw';
+    const sizes = tag.match(/\bsizes="([^"]+)"/)?.[1] || '(max-width: 850px) calc(100vw - 2.5rem), 560px';
     const fallback = variants.find(v => v.width >= 1200) || variants.at(-1);
     let updated = tag.replace(/\s+(?:srcset|sizes)="[^"]*"/g, '');
     updated = updated.replace(/\bsrc="[^"]+"/, `src="${fallback.relative}"\n                  srcset="${variants.map(v => `${v.relative} ${v.width}w`).join(', ')}"\n                  sizes="${sizes}"`);
     updated = updated.replace(/\bwidth="\d+"/, `width="${meta.width}"`).replace(/\bheight="\d+"/, `height="${meta.height}"`);
-    if (name !== 'hero-holzwerk-concept' && !/\bloading=/.test(updated)) updated = updated.replace(/\s*\/>$/, ' loading="lazy" />');
+    if (!/\bfetchpriority="high"/.test(updated) && !/\bloading=/.test(updated)) updated = updated.replace(/\s*\/>$/, ' loading="lazy" />');
     if (!/\bdecoding=/.test(updated)) updated = updated.replace(/\s*\/>$/, ' decoding="async" />');
     html = html.replace(tag, updated);
     originalBytes += fs.statSync(original).size;

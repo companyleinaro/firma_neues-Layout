@@ -14,6 +14,13 @@ Statische, responsive Unternehmenswebsite für Leinaro. Die Website benötigt ke
 
 ## Aktuelles Designsystem
 
+Die neun neuen Startseitenmotive vom 16. Oktober 2026 sind in
+`images/STARTSEITEN-BILDER.md` zugeordnet. Die Originalkopien liegen als PNG vor;
+die Seite lädt ausschließlich die komprimierten WebP-Varianten mit `srcset`.
+Für „Nicht einfach nur online“ ist die Variante ohne `_3` ausgewählt.
+Der Bildplatzhalter bei „Digitales Handwerk“ ist durch das gelieferte Motiv ersetzt.
+Abschnitt 13 in der CSS-Datei hält die neuen Bildmotive vollständig sichtbar.
+
 Die Gestaltung verbindet die klare Basis von ameisenhaufen.at mit kräftigen
 Farbakzenten und Interaktionen, inspiriert von den gelieferten Rittler-Beispielen.
 Die vorgegebene Palette besteht aus Korallrosa (#F34F7E) als Hauptfarbe, Lime
@@ -23,7 +30,7 @@ Große Überschriften, Lesetexte und Links sowie kompakte Abstände bleiben
 erhalten. Alle 15 Seiten nutzen css/style.css. Der Header ist auf allen Seiten einheitlich, einschließlich Leistungsmenü und Kontaktbutton. Eine stabile Scrollleistenbreite verhindert seitliche Verschiebungen beim Seitenwechsel. Outline-Pink-Paare wiederholen den Schriftstil des Startseiten-Heros in Seitenköpfen und ausgewählten Abschnitten.
 
 Die Seiten, Abschnittsfolge, Leistungen und Kontaktfunktionen bleiben erhalten.
-Der Startseiten-Hero zeigt images/hero-character.jpg vollflächig, auch mobil. Outline-Titel und Pink stehen mit dem Einführungstext mittig über dem Bild. Der Header ist beim Einstieg dunkel und wechselt beim Scrollen zur hellen Navigation; Abmessungen und Menüpunkte bleiben identisch. Der rotierende Projektkreis verlinkt am unteren Bildrand zur Kontaktseite. Die bisherigen Hero-Buttons entfallen. Eine Laufschrift und sanfter Textglanz ergänzen die Animationen. Beim Scrollen blenden Inhalte ein und
+Der Startseiten-Hero zeigt images/optimized/startseite-hero-farben-1200.webp vollflächig, auch mobil. Outline-Titel und Pink stehen mit dem Einführungstext mittig über dem Bild. Der Header ist beim Einstieg dunkel und wechselt beim Scrollen zur hellen Navigation; Abmessungen und Menüpunkte bleiben identisch. Der rotierende Projektkreis verlinkt am unteren Bildrand zur Kontaktseite. Die bisherigen Hero-Buttons entfallen. Eine Laufschrift und sanfter Textglanz ergänzen die Animationen. Beim Scrollen blenden Inhalte ein und
 Linien im Ablauf bauen sich auf. Buttons reagieren leicht auf den Mauszeiger;
 Bilder, Portrait und FAQ-Antworten erhalten zusätzliche Übergänge.
 Bei reduzierter Bewegung im Betriebssystem bleiben die Inhalte statisch

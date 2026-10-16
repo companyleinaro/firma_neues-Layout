@@ -3293,3 +3293,59 @@ a.contact-method:hover strong {
     width: 112px;
   }
 }
+
+/* === 13. STARTSEITENBILDER: GELIEFERTE MOTIVE OHNE BESCHNITT === */
+.home-images--updated .premium-intro__visual img,
+.home-images--updated .image-narrative__image > img,
+.home-images--updated .process-premium__personal img,
+.home-images--updated .closing-stage__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.home-images--updated .cinema-card__media { aspect-ratio: 4 / 3; background: var(--paper); }
+.home-images--updated .cinema-card__media img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+/* === 14. UEBER MICH: PORTRAIT, TITEL UND LESBARER KONTRAST === */
+.about-profile--updated .team-card__portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+}
+.about-profile--updated .team-card {
+  container-type: inline-size;
+}
+.about-profile--updated .team-card__name {
+  margin: 1.5rem 0 0.5rem;
+  font-family: var(--body);
+  font-size: clamp(0.75rem, 4.65cqw, 1.125rem);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  color: var(--ink);
+}
+.about-profile--updated .section--ink .about-values__title {
+  display: block;
+  color: var(--white);
+  -webkit-text-fill-color: var(--white);
+  -webkit-text-stroke: 0;
+}
+
+/* Webdesign-Zitat: grüner Leuchtakzent ohne Unterstreichung.
+   motion-glow nutzt die vorhandene Animation inklusive Bewegungseinstellungen. */
+.quote-feature .quote-brand-glow {
+  color: var(--lime);
+  text-decoration: none;
+  border: 0;
+  background: none;
+}
