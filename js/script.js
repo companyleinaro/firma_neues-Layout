@@ -206,6 +206,31 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('motion-idle', document.hidden);
   });
 
+  document.querySelectorAll('[data-project-flip]').forEach((card) => {
+    const toggle = card.querySelector('.project-flip__toggle');
+    const front = card.querySelector('.project-flip__front');
+    const back = card.querySelector('.project-flip__back');
+    let pinned = false;
+    const show = (open) => {
+      card.classList.toggle('is-flipped', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Projektbild anzeigen' : 'Projektinfos anzeigen');
+      toggle.firstChild.textContent = open ? 'Projektbild ' : 'Projektinfos ';
+      front.inert = open;
+      back.inert = !open;
+    };
+    show(false);
+    toggle.addEventListener('click', () => { pinned = !card.classList.contains('is-flipped'); show(pinned); });
+    card.addEventListener('pointerenter', (event) => { if (event.pointerType === 'mouse') show(true); });
+    card.addEventListener('pointerleave', (event) => {
+      if (event.pointerType === 'mouse' && !pinned && !card.contains(document.activeElement)) show(false);
+    });
+    card.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') { pinned = false; toggle.focus(); show(false); }
+    });
+    card.addEventListener('focusout', (event) => { if (!card.contains(event.relatedTarget) && !pinned) show(false); });
+  });
+
   let consent = document.querySelector('.cookie-banner');
   if (!consent) {
     consent = document.createElement('dialog');

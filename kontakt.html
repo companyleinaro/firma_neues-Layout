@@ -19,7 +19,7 @@
     <script src="js/contact-form.js" defer></script>
     <title>Kontakt &amp; Webdesign-Projekt anfragen | Leinaro</title>
   </head>
-  <body>
+  <body class="contact-refresh">
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
     <header class="site-header">
       <nav class="nav container" aria-label="Hauptnavigation">
@@ -71,103 +71,17 @@
       </nav>
     </header>
     <main id="main">
-      <section class="page-hero">
-        <div class="container reveal">
-          <p class="eyebrow">Kontakt</p>
-          <h1 class="display-pair">
-            <span class="outline-text">Erzählen Sie mir von</span>
-            <span class="lime">Ihrem Projekt.</span>
-          </h1>
+      <section class="contact-welcome">
+        <div class="container">
+          <p class="eyebrow">Unverbindlich kennenlernen</p>
+          <h1>Eine Idee?<br /><span>Reden wir darüber.</span></h1>
+          <p>Webdesign, SEO oder laufende Betreuung – erzählen Sie mir, was Sie brauchen.</p>
         </div>
       </section>
-      <section class="section contact-section section-surface section-surface--aqua">
-        <div class="container contact-layout">
-          <div class="contact-intro reveal">
-            <p class="eyebrow">Direkt erreichbar</p>
-            <h2 class="display-pair">
-              <span class="outline-text">Der erste Schritt ist</span>
-              <span class="editorial-mark">ganz einfach.</span>
-            </h2>
-            <p class="lead">
-              Sie können das Formular nutzen, anrufen oder eine E-Mail schreiben. Ich melde mich
-              persönlich bei Ihnen zurück.
-            </p>
-            <div class="contact-person">
-              <figure class="contact-person__portrait">
-                <img
-                  src="images/christoph_foto.jpg"
-                  width="632"
-                  height="609"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Christoph Leitner, Ihr Ansprechpartner bei Leinaro"
-                />
-              </figure>
-              <div class="contact-person__copy">
-                <p>Christoph Leitner</p>
-                <span>Ihr direkter Ansprechpartner.</span
-                ><span class="contact-person__arrow" aria-hidden="true"
-                  ><svg
-                    class="ui-icon ui-icon--arrow-long"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <path d="M2 12h20m-6-6 6 6-6 6" /></svg
-                ></span>
-              </div>
-            </div>
-            <div class="contact-methods">
-              <a class="contact-method contact-method--phone" href="tel:+436603972228"
-                ><span>Telefon</span><strong>+43 660 3972228</strong
-                ><small
-                  >Direkt anrufen
-                  <svg
-                    class="ui-icon ui-icon--arrow-right"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <path d="M4 12h16m-6-6 6 6-6 6" /></svg></small></a
-              ><a class="contact-method" href="mailto:office@leinaro.at"
-                ><span>E-Mail</span><strong>office@leinaro.at</strong
-                ><small
-                  >Nachricht schreiben
-                  <svg
-                    class="ui-icon ui-icon--arrow-right"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <path d="M4 12h16m-6-6 6 6-6 6" /></svg></small
-              ></a>
-              <div class="contact-method contact-method--info">
-                <span>Erreichbarkeit</span><strong>Mo–Fr, 08:00–17:00</strong
-                ><small>Termine nach Vereinbarung</small>
-              </div>
-              <div class="contact-method contact-method--info">
-                <span>Standort</span><strong>Feldstraße 3</strong
-                ><small>8670 Krieglach · Steiermark</small>
-              </div>
-            </div>
-          </div>
+      <section class="contact-workspace" aria-label="Projektanfrage und Kontaktmöglichkeiten">
+        <div class="container contact-workspace__grid">
           <form
-            class="contact-form reveal delay-1"
+            class="contact-form reveal"
             action="https://api.web3forms.com/submit"
             method="POST"
             accept-charset="UTF-8"
@@ -187,8 +101,8 @@
             <div class="contact-form__head">
               <span>Projektstart</span>
               <div>
-                <h3>Unverbindlich anfragen</h3>
-                <p>Erzählen Sie mir kurz, was Sie vorhaben. Alles Weitere klären wir persönlich.</p>
+                <h3>Ihr Projekt in wenigen Worten</h3>
+                <p>Was haben Sie vor? Ich melde mich persönlich bei Ihnen zurück.</p>
               </div>
             </div>
             <div class="form-grid">
@@ -209,7 +123,7 @@
                 ><input id="phone" name="phone" type="tel" autocomplete="tel" />
               </div>
               <div class="field field--full">
-                <label for="service">Wofür interessieren Sie sich?</label
+                <label for="service">Gewünschte Leistung</label
                 ><select id="service" name="service">
                   <option value="">Bitte auswählen</option>
                   <option>Webdesign</option>
@@ -220,7 +134,7 @@
                 </select>
               </div>
               <div class="field field--full">
-                <label for="message">Ihre Nachricht *</label
+                <label for="message">Ihre Projektidee *</label
                 ><textarea id="message" name="message" required></textarea>
               </div>
             </div>
@@ -234,7 +148,7 @@
             >
             <div class="contact-form__footer">
               <button class="button button--primary" type="submit" disabled>
-                Nachricht senden
+                Projektanfrage senden
               </button>
               <p class="image-note">Sie erhalten nach dem Versand direkt hier eine Bestätigung.</p>
             </div>
@@ -253,6 +167,18 @@
               </p></noscript
             >
           </form>
+          <aside class="contact-sidebar reveal delay-1" aria-labelledby="contact-person-title">
+            <div class="contact-sidebar__person">
+              <img src="images/optimized/ueber-mich-christoph-leitner-480.webp" width="1086" height="1448" loading="lazy" decoding="async" alt="Christoph Leitner, Ihr Ansprechpartner" />
+              <div><p class="eyebrow">Ihr Ansprechpartner</p><h2 id="contact-person-title">Christoph Leitner</h2><p>Persönlich. Vom ersten Gespräch bis zum Onlinegang.</p></div>
+            </div>
+            <div class="contact-sidebar__links">
+              <a href="mailto:office@leinaro.at"><span>E-Mail schreiben</span><strong>office@leinaro.at</strong><span aria-hidden="true">↗</span></a>
+              <a href="tel:+436603972228"><span>Direkt anrufen</span><strong>+43 660 3972228</strong><span aria-hidden="true">↗</span></a>
+            </div>
+            <dl class="contact-sidebar__facts"><div><dt>Erreichbarkeit</dt><dd>Mo–Fr, 08:00–17:00<br />Termine nach Vereinbarung</dd></div><div><dt>Standort</dt><dd>Feldstraße 3<br />8670 Krieglach · Steiermark</dd></div></dl>
+            <div class="contact-sidebar__next"><span>So geht es weiter</span><p>Ich lese Ihre Anfrage und melde mich persönlich. Gemeinsam klären wir Ziele, Umfang und die nächsten Schritte.</p></div>
+          </aside>
         </div>
       </section>
     </main>
