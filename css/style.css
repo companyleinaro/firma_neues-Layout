@@ -384,7 +384,7 @@ body.menu-open .site-header {
   height: 38px;
   flex-shrink: 0;
   overflow: hidden;
-  background: url('../images/leinaro-logo.svg') center / contain no-repeat;
+  background: url('../images/leinaro-logo-2026-v2.svg') center / contain no-repeat;
   font-size: 0;
 }
 .brand-mark {
@@ -1819,7 +1819,7 @@ a.contact-method:hover strong {
 /* === 10. KREATIVE AKZENTE & ANIMATIONEN === */
 /* Weißraum bleibt die Basis. Kräftige Akzente setzen einzelne Schwerpunkte. */
 .brand {
-  filter: grayscale(1) brightness(0.25);
+  filter: none;
 }
 .eyebrow,
 .section-label {
@@ -3230,7 +3230,12 @@ a.contact-method:hover strong {
   backdrop-filter: blur(12px);
 }
 .site-header--hero:not(.is-scrolled) .brand {
-  filter: grayscale(1) brightness(0) invert(1);
+  filter: none;
+  background-color: var(--white);
+  background-origin: content-box;
+  padding: 7px 10px;
+  box-sizing: content-box;
+  border-radius: 4px;
 }
 .site-header--hero:not(.is-scrolled) .nav-links > li > a,
 .site-header--hero:not(.is-scrolled) .has-submenu > button {

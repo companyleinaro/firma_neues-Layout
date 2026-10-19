@@ -38,7 +38,7 @@ und vollständig sichtbar. Ohne JavaScript sind alle Inhalte direkt lesbar.
 Hover- und Tastaturfokus-Effekte färben Schriften, Buttons und Bildflächen.
 Der Kontaktbereich zeigt das vorhandene Portrait, kräftige Kontaktkarten
 und ein reduziertes Formular. Projekte und ihre Links bleiben direkt sichtbar.
-Das Original-Logo bleibt als Datei erhalten und wird per CSS monochrom dargestellt.
+Das aktuelle Logo liegt in `images/leinaro-logo-2026-v2.svg` und wird unverändert mit seinen Originalfarben in Navigation und Footer verwendet. Im Browser-Tab wird die gelieferte Version mit weißem Hintergrund (`images/leinaro-favicon-weiss-v2.svg`) verwendet. Vor dem dunklen Hero-Hintergrund sorgt eine helle Fläche für Lesbarkeit.
 Poppins wird lokal aus fonts/ geladen (Regular 400, Medium 500, SemiBold 600, Bold 700, ExtraBold 800 und Black 900). Große Überschriften verwenden ExtraBold/Black, Outline-Akzente ExtraBold und Lesetexte Regular/Medium. Die SIL Open Font License liegt in fonts/OFL.txt. Es werden keine externen Schriftdienste geladen.
 
 ### Bilder ergänzen
