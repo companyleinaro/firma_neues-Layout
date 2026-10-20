@@ -86,9 +86,9 @@ Navigation, Hero, Komponenten, Animationen und responsive Regeln schneller wiede
 
 ## SEO und Hauptdomain
 
-Die Hauptadresse ist `https://leinaro.at/`. Alle 12 indexierbaren Seiten haben einen
-eigenen Canonical und stehen in der Sitemap, einschließlich der beiden Referenz-Detailseiten.
-Die Projektübersicht und die Startseite verlinken diese Detailseiten direkt.
+Die Hauptadresse ist `https://leinaro.at/`. Alle 11 indexierbaren Seiten haben einen
+eigenen Canonical und stehen in der Sitemap, einschließlich der Hairdesign-Referenz.
+Die Projektübersicht und die Startseite verlinken die Hairdesign-Detailseite direkt. Neuburger ist vorübergehend entfernt; die bisherige Adresse leitet nach dem Deployment zur Projektübersicht weiter.
 Impressum, Datenschutz und die Dankeseite behalten ihre vorhandene `noindex`-Einstellung.
 `vercel.json` bereitet dauerhafte Weiterleitungen der alten Domain und der www-Varianten
 auf die Hauptdomain sowie von `/index.html` auf `/` vor. Die Domain-Weiterleitungen
