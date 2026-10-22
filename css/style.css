@@ -79,7 +79,10 @@ body {
   color: var(--ink);
   font-family: var(--body);
   font-size: 20px;
+  font-kerning: normal;
+  font-feature-settings: 'kern' 1, 'liga' 1;
   line-height: 1.65;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 body.menu-open,
@@ -162,7 +165,7 @@ h4 {
   margin: 0;
   font-weight: 800;
   line-height: 1.12;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.018em;
   overflow-wrap: break-word;
 }
 h1 {
@@ -176,7 +179,7 @@ h2 {
 h3 {
   font-size: clamp(1.6rem, 2.25vw, 2.2rem);
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
 }
 p {
   margin: 0 0 1.25rem;
@@ -555,7 +558,7 @@ body.menu-open .site-header {
 .hero-showcase h1 {
   font-size: clamp(3rem, 6.2vw, 7rem);
   font-weight: 900;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.02em;
   line-height: 1.02;
 }
 .hero-showcase h1 > span,
@@ -644,7 +647,7 @@ body.menu-open .site-header {
 .hero-preview__brand {
   font-size: 1rem;
   font-weight: 700;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.02em;
 }
 .hero-preview__nav-items {
   display: flex;
@@ -676,7 +679,7 @@ body.menu-open .site-header {
   margin-bottom: 0.8rem;
   font-size: clamp(1.8rem, 3vw, 3rem);
   font-weight: 500;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.02em;
   line-height: 1.04;
 }
 .hero-preview__description {
@@ -1086,7 +1089,7 @@ body.menu-open .site-header {
 .quote-feature blockquote {
   margin: 1rem 0 2rem;
   font-size: clamp(2rem, 4.3vw, 4.1rem);
-  letter-spacing: -0.045em;
+  letter-spacing: -0.018em;
   line-height: 1.25;
 }
 .quote-feature .accent {
@@ -1162,7 +1165,7 @@ body.menu-open .site-header {
 .image-placeholder strong {
   font-size: clamp(1.3rem, 2.3vw, 2rem);
   font-weight: 500;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.015em;
   line-height: 1.2;
 }
 .image-placeholder p {
@@ -1498,7 +1501,7 @@ body.menu-open .site-header {
   font-size: clamp(1rem, 1.55vw, 1.3rem);
   font-weight: 500;
   line-height: 1.45;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 .faq-item summary::-webkit-details-marker,
 .mobile-disclosure summary::-webkit-details-marker {
@@ -1540,7 +1543,7 @@ body.menu-open .site-header {
 }
 .faq-sheet__title {
   font-size: 1.8rem;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   line-height: 1.35;
 }
 .faq-sheet__note .text-arrow {
@@ -1688,7 +1691,7 @@ a.contact-method:hover strong {
   max-width: none;
   margin: 2.75rem 0 1.25rem;
   font-size: 2rem;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.012em;
 }
 .legal h3 {
   margin: 2rem 0 1rem;
@@ -1989,7 +1992,7 @@ a.contact-method:hover strong {
   font-size: clamp(3.5rem, 7.8vw, 8rem);
   font-weight: 800;
   line-height: 1.2;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.02em;
   white-space: nowrap;
 }
 .creative-marquee__outline {
@@ -2143,7 +2146,7 @@ a.contact-method:hover strong {
   margin-bottom: 0.4rem;
   font-size: 1.45rem;
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
 }
 .contact-person__copy > span {
   display: block;
@@ -2824,7 +2827,7 @@ a.contact-method:hover strong {
   }
   .hero-showcase h1 {
     font-size: clamp(3.35rem, 13.3vw, 5rem);
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em;
   }
   .hero-showcase__intro {
     max-width: 35ch;
@@ -2898,7 +2901,7 @@ a.contact-method:hover strong {
   }
   .page-hero h1 {
     font-size: clamp(2.5rem, 10.6vw, 4.1rem);
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em;
   }
   .page-hero .eyebrow {
     margin-bottom: 1.5rem;
@@ -3335,7 +3338,7 @@ a.contact-method:hover strong {
   font-size: clamp(0.75rem, 4.65cqw, 1.125rem);
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   white-space: nowrap;
   color: var(--ink);
 }
@@ -3470,7 +3473,15 @@ html:not(.js) .project-flip__inner { display: block; }
 html:not(.js) .project-flip__front { display: none; }
 html:not(.js) .project-flip__back { display: flex; transform: none; }
 @media (max-width: 850px) {
-  .about-profile--updated .page-hero .lime { font-size: clamp(1.4rem, 6.8vw, 3.8rem); white-space: nowrap; hyphens: none; word-break: normal; overflow-wrap: normal; }
+  .about-profile--updated .page-hero .lime {
+    max-width: 100%;
+    font-size: clamp(1.8rem, 9.2vw, 3.8rem);
+    letter-spacing: -0.015em;
+    white-space: nowrap;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
   .site-header .nav-links .has-submenu.is-current-section > button,
   .site-header .nav-links .has-submenu > button.active { background: #f34f7e18; color: var(--ink); }
   .site-header .nav-links .has-submenu.open > button { background: transparent; }
@@ -3483,4 +3494,27 @@ html:not(.js) .project-flip__back { display: flex; transform: none; }
 @media (max-width: 600px) {
   .project-flip__back { padding: 1.5rem; }
   .project-flip__back dl > div { grid-template-columns: 4rem minmax(0,1fr); gap: 0.75rem; }
+}
+
+/* === 17. LEISTUNGSBEZEICHNUNGEN, KONTAKTLINKS & RECHTLICHE PRÜFMARKIERUNGEN === */
+.legal-review-note { margin: 1.5rem 0; padding: 1.1rem 1.25rem; border-left: 4px solid #93651b; background: #fff4dc; color: #45300e; font-size: 0.95rem; line-height: 1.65; }
+.legal-review-note > strong { display: block; margin-bottom: 0.5rem; }
+.legal .legal-review-note p { margin: 0; color: #45300e; }
+.legal ul { padding-left: 1.4rem; }
+.legal li + li { margin-top: 0.5rem; }
+.legal code { overflow-wrap: anywhere; }
+.page--contact a[href^='mailto:'], .page--contact a[href^='tel:'] { transition: color 0.2s ease, background-color 0.2s ease; }
+.page--contact a[href^='mailto:']:hover, .page--contact a[href^='tel:']:hover,
+.page--contact a[href^='mailto:']:focus-visible, .page--contact a[href^='tel:']:focus-visible { color: #b91b4c; text-decoration: underline; text-underline-offset: 0.2em; }
+.page--contact .contact-sidebar__links a:hover, .page--contact .contact-sidebar__links a:focus-visible { background: #f34f7e0f; text-decoration: none; }
+.page--contact .contact-sidebar__links a:hover strong, .page--contact .contact-sidebar__links a:focus-visible strong { text-decoration: underline; text-underline-offset: 0.2em; }
+.page--contact .contact-sidebar__links a > span:last-child { transition: transform 0.2s ease; }
+.page--contact .contact-sidebar__links a:hover > span:last-child, .page--contact .contact-sidebar__links a:focus-visible > span:last-child { transform: translate(3px, -3px); }
+.cinema-card h3 { overflow-wrap: normal; hyphens: none; }
+@media (max-width: 600px) { .cinema-card h3 { font-size: clamp(1.65rem, 7.8vw, 2.4rem); } }
+
+@media (max-width: 360px) {
+  .about-profile--updated .page-hero .lime { font-size: clamp(1.45rem, 8.2vw, 1.85rem); }
+  .contact-sidebar__person .eyebrow::before { display: none; }
+  .contact-sidebar__person .eyebrow { letter-spacing: 0.06em; white-space: normal; }
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex,nofollow" />
     <link rel="icon" href="images/leinaro-favicon-weiss-v2.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="images/linaro-mark.png" />
     <link rel="preload" href="fonts/poppins-600.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
@@ -15,7 +16,7 @@
     <header class="site-header">
       <nav class="nav container" aria-label="Hauptnavigation">
         <a class="brand" href="./" aria-label="Leinaro Startseite"
-          ><span class="brand-mark"></span>Leinaro</a
+          >Leinaro</a
         >
         <button
           class="menu-toggle"
@@ -24,7 +25,7 @@
           aria-expanded="false"
           aria-controls="primary-menu"
         >
-          <span></span><span></span><span></span>
+          <span aria-hidden="true">&#8203;</span><span aria-hidden="true">&#8203;</span><span aria-hidden="true">&#8203;</span>
         </button>
         <ul class="nav-links" id="primary-menu">
           <li><a href="./">Start</a></li>
@@ -32,10 +33,10 @@
           <li class="has-submenu">
             <button type="button">Leistungen</button>
             <ul class="submenu">
-              <li><a href="webdesign.html">Webdesign</a></li>
+              <li><a href="webdesign.html">Webdesign &amp; Entwicklung</a></li>
               <li><a href="seo.html">SEO &amp; Sichtbarkeit</a></li>
               <li><a href="domain-hosting.html">Domain &amp; Hosting</a></li>
-              <li><a href="betreuung.html">Betreuung</a></li>
+              <li><a href="betreuung.html">Wartung &amp; Betreuung</a></li>
             </ul>
           </li>
           <li><a href="referenzen.html">Projekte</a></li>
@@ -70,115 +71,44 @@
       </section>
       <section class="section section-surface section-surface--white">
         <article class="container legal">
-          <p>
-            Der Schutz Ihrer persönlichen Daten ist Leinaro ein besonderes Anliegen. Diese
-            Datenschutzerklärung informiert Sie darüber, welche personenbezogenen Daten beim Besuch
-            dieser Website und bei einer Kontaktaufnahme verarbeitet werden.
-          </p>
-          <h2>1. Verantwortliche Stelle</h2>
-          <p>
-            <strong>Leinaro</strong><br />Dipl.-Wirt.-Ing. (FH) Leitner Christoph, BEd<br />Feldstraße
-            3, 8670 Krieglach, Österreich<br />Telefon:
-            <a href="tel:+436603972228">+43 660 3972228</a><br />E-Mail:
-            <a href="mailto:office@leinaro.at">office@leinaro.at</a>
-          </p>
-          <h2>2. Bereitstellung der Website und Server-Logfiles</h2>
-          <p>
-            Beim Aufruf dieser Website verarbeitet der Hosting-Anbieter technisch erforderliche
-            Zugriffsdaten. Dazu können insbesondere IP-Adresse, Datum und Uhrzeit des Abrufs,
-            aufgerufene Seite, Referrer-URL, Browsertyp, Betriebssystem und Statuscodes gehören. Die
-            Verarbeitung dient der technischen Bereitstellung, Stabilität und Sicherheit der Website
-            und erfolgt auf Grundlage des berechtigten Interesses gemäß Art. 6 Abs. 1 lit. f DSGVO.
-          </p>
-          <p>
-            Die Website wird über Vercel Inc. bereitgestellt. Informationen zur Datenverarbeitung
-            durch Vercel finden Sie in der
-            <a
-              href="https://vercel.com/legal/privacy-policy"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Datenschutzerklärung von Vercel</a
-            >. Ein möglicher Drittlandtransfer in die USA erfolgt nur im gesetzlich zulässigen
-            Rahmen.
-          </p>
-          <h2>3. Kontaktaufnahme und Kontaktformular</h2>
-          <p>
-            Wenn Sie per Telefon, E-Mail oder Kontaktformular Kontakt aufnehmen, verarbeite ich die
-            von Ihnen übermittelten Angaben (insbesondere Name, Firma/Verein, E-Mail-Adresse,
-            Telefonnummer, gewünschte Leistung und Nachricht), um Ihre Anfrage zu beantworten und
-            gegebenenfalls vorvertragliche Maßnahmen durchzuführen. Rechtsgrundlage ist Art. 6 Abs.
-            1 lit. b DSGVO; soweit erforderlich auch Art. 6 Abs. 1 lit. f DSGVO.
-          </p>
-          <p>
-            Für den technischen Versand des Kontaktformulars wird
-            <a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer"
-              >FormSubmit</a
-            >
-            eingesetzt. Die Formulardaten werden an FormSubmit übermittelt und von dort an die
-            angegebene geschäftliche E-Mail-Adresse weitergeleitet. FormSubmit stellt außerdem eine
-            automatische Empfangsbestätigung bereit. Die Datenschutzinformationen des Dienstes
-            finden Sie unter
-            <a href="https://formsubmit.co/privacy" target="_blank" rel="noopener noreferrer"
-              >formsubmit.co/privacy</a
-            >. Bitte senden Sie über das Kontaktformular keine besonderen Kategorien
-            personenbezogener Daten.
-          </p>
-          <p>
-            Die Daten werden gelöscht, sobald sie für die Bearbeitung Ihrer Anfrage nicht mehr
-            benötigt werden und keine gesetzlichen Aufbewahrungspflichten entgegenstehen. FormSubmit
-            gibt an, Formulareinreichungen für bis zu 30 Tage bereitzuhalten.
-          </p>
-          <h2>4. Cookies und lokale Speicherung</h2>
-          <p>
-            Diese Website verwendet keine Analyse-, Marketing- oder Social-Media-Cookies. Wenn Sie
-            den Datenschutzhinweis mit „Verstanden“ schließen, wird diese Information ausschließlich
-            lokal in Ihrem Browser gespeichert, damit der Hinweis nicht erneut erscheint. Diese
-            Speicherung ist für die benutzerfreundliche Bereitstellung der Website erforderlich und
-            kann jederzeit über Ihre Browser-Einstellungen gelöscht werden.
-          </p>
-          <h2>5. Lokale Schriftarten und Bilder</h2>
-          <p>
-            Schriftarten, Bilder und Website-Dateien werden direkt von dieser Website geladen. Es
-            werden dafür keine Verbindungen zu Google Fonts, Adobe Fonts, Bild-CDNs oder
-            vergleichbaren externen Anbietern aufgebaut.
-          </p>
-          <h2>6. Empfänger und Drittlandübermittlungen</h2>
-          <p>
-            Empfänger Ihrer Daten können im Rahmen der technischen Bereitstellung der Website der
-            Hosting-Anbieter Vercel sowie beim Absenden des Kontaktformulars FormSubmit sein. Soweit
-            diese Empfänger Daten außerhalb der Europäischen Union oder des Europäischen
-            Wirtschaftsraums verarbeiten, erfolgt die Übermittlung nur unter Beachtung der
-            Voraussetzungen der Art. 44 ff. DSGVO.
-          </p>
+          <aside class="legal-review-note" role="note"><strong>Vor Veröffentlichung ergänzen</strong><p>Die markierten Angaben zu Hosting, E-Mailanbieter und Löschfristen müssen mit den tatsächlich verwendeten Konten und Verträgen abgeglichen werden. Diese Fassung ist noch nicht abschließend freigegeben.</p></aside>
+          <p>Diese Erklärung erläutert die Verarbeitung personenbezogener Daten beim Besuch dieser Website und bei Anfragen zu den Leistungen von Leinaro.</p>
+          <h2>1. Verantwortlicher</h2>
+          <p><strong>Dipl.-Wirt.-Ing. (FH) Christoph Leitner, BEd – Leinaro</strong><br />Einzelunternehmen<br />Feldstraße 3, 8670 Krieglach, Österreich<br />Telefon: <a href="tel:+436603972228">+43 660 3972228</a><br />E-Mail: <a href="mailto:office@leinaro.at">office@leinaro.at</a></p>
+          <p>Die geplanten Gewerbe lauten „Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik“ und „Werbeagentur“. Verantwortlicher für die hier beschriebene Datenverarbeitung bleibt Christoph Leitner.</p>
+          <h2>2. Website-Betrieb und Hosting</h2>
+          <p>Die Website wird über Vercel Inc. (USA) ausgeliefert. Beim Abruf können IP-Adresse, Zeitpunkt, angeforderte Datei, Referrer, Browser- und Betriebssysteminformationen sowie technische Statusdaten verarbeitet werden. Dies ermöglicht die Übertragung der Website, Fehleranalyse und Abwehr von Missbrauch. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; das berechtigte Interesse ist ein sicherer und zuverlässiger Website-Betrieb.</p>
+          <p>Vercel verwendet eigene Infrastruktur und Unterauftragnehmer. Informationen stehen in der <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> und im <a href="https://vercel.com/legal/dpa" target="_blank" rel="noopener noreferrer">Data Processing Addendum von Vercel</a>.</p>
+          <aside class="legal-review-note" role="note"><strong>Noch zu prüfen: Vercel-Vertrag und Protokolle</strong><p>Tarif, Geltung des Auftragsverarbeitungsvertrags, eingesetzte Regionen, tatsächlich gespeicherte Logdaten und deren Löschfrist bestätigen. Die konkrete Speicherdauer hier ergänzen; Aufbewahrungszeiten für verschiedene Logarten können voneinander abweichen.</p></aside>
+          <h2>3. Kontakt per E-Mail, Telefon und Formular</h2>
+          <p>Ich verarbeite die von Ihnen mitgeteilten Kontakt- und Inhaltsdaten, um Anfragen zu beantworten und mögliche Aufträge vorzubereiten. Dazu zählen Name, E-Mail-Adresse und Nachricht sowie gegebenenfalls Firma/Verein, Telefonnummer und gewünschte Leistung.</p>
+          <p>Für vertragsbezogene Anfragen gilt Art. 6 Abs. 1 lit. b DSGVO. Allgemeine Anfragen bearbeite ich nach Art. 6 Abs. 1 lit. f DSGVO; berechtigtes Interesse ist die geschäftliche Kommunikation und Beantwortung Ihrer Anfrage. Eine zusätzliche datenschutzrechtliche Einwilligung wird dafür nicht verlangt.</p>
+          <p>Im Formular sind Name, E-Mail-Adresse und Nachricht erforderlich. Ohne diese Angaben kann das Formular nicht verarbeitet werden. Die übrigen Angaben sind freiwillig. Eine Kontaktaufnahme per E-Mail oder Telefon ist ebenfalls möglich.</p>
+          <h3>Versand über Web3Forms</h3>
+          <p>Das Formular nutzt Web3Forms, betrieben von Web3Creative mit Betriebssitz in Indien. Erst beim Absenden werden Ihre Angaben an <code>api.web3forms.com</code> übertragen und zur Zustellung an mein geschäftliches E-Mailpostfach verarbeitet. Technische Verbindungs- und Missbrauchsschutzdaten, insbesondere IP-Adresse, können ebenfalls verarbeitet werden. Die Bestätigung erscheint unmittelbar auf dieser Website; eine automatische Bestätigungs-E-Mail an Sie ist hier nicht eingerichtet.</p>
+          <p>Web3Creative beschreibt sich für Formularinhalte als Auftragsverarbeiter. Details zu Unterauftragnehmern und etwaigem Spamfilter-Einsatz finden Sie in der <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Web3Forms</a> und im <a href="https://web3forms.com/dpa" target="_blank" rel="noopener noreferrer">Auftragsverarbeitungsvertrag</a>. Bitte übermitteln Sie keine sensiblen Daten wie Gesundheitsangaben.</p>
+          <h3>E-Mailpostfach und weitere Empfänger</h3>
+          <p>Anfragen werden außerdem in meinem geschäftlichen E-Mailpostfach verarbeitet. Soweit erforderlich, kommen technische Dienstleister sowie bei einem Auftrag gesetzlich vorgesehene Empfänger, etwa Steuerberatung oder Behörden, hinzu.</p>
+          <aside class="legal-review-note" role="note"><strong>Noch zu ergänzen: E-Mailanbieter</strong><p>Name, Sitz und Datenschutzlink des tatsächlichen E-Mailanbieters sowie dessen Auftragsverarbeitungsvertrag und mögliche Drittlandverarbeitung ergänzen.</p></aside>
+          <h2>4. Speicherdauer</h2>
+          <p>Anfragen werden so lange aufbewahrt, wie dies zur Bearbeitung, für nachvollziehbar erwartbare Rückfragen oder zur Geltendmachung beziehungsweise Abwehr von Ansprüchen erforderlich ist. Anschließend werden sie gelöscht, sofern keine gesetzliche Pflicht eine weitere Aufbewahrung verlangt. Entsteht ein Auftrag, gelten für aufbewahrungspflichtige Geschäftsunterlagen zusätzlich die jeweils einschlägigen gesetzlichen Fristen.</p>
+          <p>Web3Forms nennt für Formularinhalte eine maximale Aufbewahrung von drei Jahren; kürzere Fristen können tarifabhängig oder durch frühere Löschung gelten. Die tatsächlich im verwendeten Konto geltenden Einstellungen sind gesondert zu prüfen.</p>
+          <aside class="legal-review-note" role="note"><strong>Noch festzulegen: Löschkonzept</strong><p>Konkrete Frist für erledigte Anfragen und E-Mailkopien festlegen, Löschung tatsächlich umsetzen und Web3Forms-Konto einschließlich technischer Aufbewahrung prüfen. Die frühere pauschale Angabe von 30 Tagen ist für den eingesetzten Dienst nicht belegt.</p></aside>
+          <h2>5. Übermittlungen außerhalb des EWR</h2>
+          <p>Vercel und Web3Forms können Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. Web3Creative nennt dafür EU-Standardvertragsklauseln in seinem Auftragsverarbeitungsvertrag. Auch Vercel beschreibt Übermittlungsmechanismen in seinen Vertragsunterlagen. Die anwendbaren Garantien und erforderlichen Schutzmaßnahmen müssen zum tatsächlich verwendeten Vertrag und den Empfängern passen. Kopien beziehungsweise Informationen zu den einschlägigen Garantien können Sie über meine Kontaktadresse anfordern.</p>
+          <aside class="legal-review-note" role="note"><strong>Noch zu prüfen: Drittlandübermittlungen</strong><p>Die tatsächlich geltenden Verträge, Anlagen, Empfänger, Speicherorte und Übermittlungsgarantien für Vercel, Web3Forms und E-Mailanbieter dokumentieren. Öffentliche Anbieterangaben allein ersetzen diese Prüfung nicht.</p></aside>
+          <h2>6. Cookies, lokale Speicherung und eingebundene Dienste</h2>
+          <p>Im geprüften Website-Code sind keine Analyse-, Werbe-, Social-Media-Trackingdienste oder extern eingebetteten Karten und Videos eingerichtet. Schriftarten und Bilder werden mit den Website-Dateien bereitgestellt; externe Schriftanbieter werden dafür nicht aufgerufen.</p>
+          <p>Nach dem Schließen des Datenschutzhinweises wird im Local Storage Ihres Browsers unter <code>leitwerk-cookie-note</code> die Einstellung <code>acknowledged</code> gespeichert. Sie enthält keine Kontakt- oder Formulardaten, hat im Code kein Ablaufdatum und bleibt bis zum Löschen der Website-Daten erhalten. Damit wird der Hinweis bei späteren Besuchen ausgeblendet. Eine Zuordnung zu Marketingprofilen erfolgt durch diese Funktion nicht.</p>
+          <aside class="legal-review-note" role="note"><strong>Noch rechtlich zu prüfen: lokale Hinweisspeicherung</strong><p>Die Zulässigkeit der dauerhaften Local-Storage-Speicherung nach § 165 Abs. 3 TKG 2021 und gegebenenfalls DSGVO bewerten. Ein reiner Komfortzweck rechtfertigt die Ausnahme für unbedingt erforderliche Speicherung nicht automatisch; alternativ die Funktion ohne dauerhafte Speicherung umsetzen.</p></aside>
           <h2>7. Ihre Rechte</h2>
-          <p>
-            Sie haben im Rahmen der gesetzlichen Vorgaben das Recht auf Auskunft, Berichtigung,
-            Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen
-            die Verarbeitung Ihrer personenbezogenen Daten. Eine erteilte Einwilligung können Sie
-            jederzeit mit Wirkung für die Zukunft widerrufen.
-          </p>
-          <p>
-            Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen Datenschutzrecht
-            verstößt, können Sie sich bei der österreichischen Datenschutzbehörde beschweren.
-          </p>
-          <p>
-            Österreichische Datenschutzbehörde<br />Barichgasse 40–42, 1030 Wien<br /><a
-              href="https://www.dsb.gv.at/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >www.dsb.gv.at</a
-            >
-          </p>
-          <h2>8. Externe Links</h2>
-          <p>
-            Diese Website verlinkt vereinzelt auf externe Websites. Für deren Inhalte und
-            Datenschutzbestimmungen sind die jeweiligen Betreiber verantwortlich.
-          </p>
-          <p class="image-note">
-            Stand: 29. September 2026. Diese Erklärung muss vor dem endgültigen Livegang rechtlich
-            geprüft werden, insbesondere falls weitere Dienste, Tracking, Karten, Videos oder
-            Social-Media-Integrationen hinzukommen.
-          </p>
+          <p>Nach Maßgabe der DSGVO haben Sie Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit. Soweit eine Verarbeitung auf Einwilligung beruht, können Sie diese für die Zukunft widerrufen.</p>
+          <p><strong>Widerspruch:</strong> Gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO können Sie aus Gründen Ihrer besonderen Situation Widerspruch einlegen. Verwenden Sie dafür die oben genannte Kontaktadresse.</p>
+          <p>Sie können sich bei der Österreichischen Datenschutzbehörde beschweren: Barichgasse 40–42, 1030 Wien; <a href="https://www.dsb.gv.at/" target="_blank" rel="noopener noreferrer">www.dsb.gv.at</a>.</p>
+          <h2>8. Automatisierte Entscheidungen und externe Links</h2>
+          <p>Eine ausschließlich automatisierte Entscheidung mit rechtlicher oder vergleichbar erheblicher Wirkung einschließlich eines entsprechenden Profilings ist für die hier beschriebenen Vorgänge nicht eingerichtet. Automatische Spamfilter dienen dem Missbrauchsschutz.</p>
+          <p>Externe Links, etwa zu Referenzen oder Social-Media-Plattformen, laden im geprüften Code keine eingebetteten Inhalte dieser Anbieter. Nach dem Anklicken gelten auf der Zielseite die dortigen Datenschutzinformationen.</p>
+          <p class="image-note">Stand: 22. Oktober 2026. Die hervorgehobenen Angaben müssen vor Veröffentlichung geklärt und diese Erklärung entsprechend vervollständigt werden.</p>
         </article>
       </section>
     </main>
@@ -187,7 +117,7 @@
         <div class="footer-unified__top">
           <div class="footer-unified__brand">
             <a class="brand footer-brand" href="./" aria-label="Leinaro Startseite"
-              ><span class="brand-mark"></span>Leinaro</a
+              >Leinaro</a
             >
             <p class="muted">WEBDESIGN &middot; SEO &middot; HOSTING</p>
             <nav class="footer-social" aria-label="Social Media">
@@ -233,11 +163,11 @@
             <p class="footer-title">Entdecken</p>
             <ul class="footer-links">
               <li><a href="./">Start</a></li>
-              <li><a href="ueber-uns.html">Über mich</a></li>
+              <li><a href="ueber-uns.html">Über Leinaro</a></li>
               <li><a href="leistungen.html">Leistungen</a></li>
-              <li><a href="referenzen.html">Projekte</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="kontakt.html">Kontakt</a></li>
+              <li><a href="referenzen.html">Referenzen</a></li>
+              <li><a href="faq.html">Antworten</a></li>
+              <li><a href="kontakt.html">Kontaktseite</a></li>
             </ul>
           </div>
           <div>
